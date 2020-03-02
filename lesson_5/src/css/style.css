@@ -1,0 +1,60 @@
+h2 {
+  text-align: center;
+  margin: 0 auto;
+  width: 40%;
+  border: 3px solid #301399;
+  border-radius: 20%;
+}
+
+h3 {
+  text-align: center;
+  width: 40%;
+  margin: 0 auto;
+  border: 3px solid #301399;
+  border-radius: 20%;
+}
+
+body {
+  background-color: rgb(197, 225, 252);
+}
+
+.span-u {
+  text-decoration: underline;
+}
+
+.span-b {
+  font-weight: 600;
+}
+
+.span-s {
+  text-decoration: line-through;
+}
+
+.span-i {
+  font-style: italic;
+}
+
+.chapter-red {
+  background-color: rgb(255, 188, 161);
+  padding:  2% 2% 2% 2%;
+}
+
+.chapter-green {
+  background-color: rgb(101, 250, 136);
+  padding:  2% 2% 2% 2%;
+}
+
+.img-cover {
+  text-align: center;
+  margin: 1% 0 1% 0;
+}
+
+.index-book5 {
+  position: fixed;
+  left: 80%;
+}
+
+.text-book5 {
+  max-width: 80%;
+  /* блок занимает ширину родителя, max-width её ограничивает */
+}
