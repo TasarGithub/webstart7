@@ -1,0 +1,22 @@
+{
+  "name": "repair-design",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TasarGithub/webstart7.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TasarGithub/webstart7/issues"
+  },
+  "homepage": "https://github.com/TasarGithub/webstart7#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
