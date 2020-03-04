@@ -120,10 +120,21 @@
 /* .item__service {
 text-align: center;
 } */
-
-ul li {
+ul {
+  list-style-image: url(/3_addTask/2/img/marker.png/marker.png);
+}
+/* ul li {
   list-style: none; 
     background: url(img/marker.png) no-repeat left 50%; 
     padding-left: 25px;
   display: block;
-}
+} */
+
+/* ul {
+  margin-left: -1em;
+ }
+ li {
+  list-style: none;
+  background: url(/img/marker.png/marker.png)  no-repeat 0 2px;
+  padding-left: 20px;
+ } */

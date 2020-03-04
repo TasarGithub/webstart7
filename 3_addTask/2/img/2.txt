@@ -3,18 +3,7 @@
   padding-bottom: 30px;
 }
 
-.text {
-  text-align: center;
-  /* font-size: 19px;
-  line-height: 20px;
-  font-weight: 700;
-  color: #1a1820; */
-}
-/* 
-.item__text {
 
-  padding-bottom: 30px;
-} */
 
 .button {
   display: inline;
@@ -36,3 +25,12 @@
   color: #ffffff;
   background-color: #66cc66;;
 }
+
+
+              <ul class="service item__service">
+                <li class="service__more">Завоз материала и его подъём</li>
+                <li class="service__more">Проведение работ</li>
+                <li class="service__more">Уборка</li>
+                <li class="service__more">Гарантия 2 года</li>
+                <li class="service__more">Можно сразу клеить обои</li>
+              </ul>

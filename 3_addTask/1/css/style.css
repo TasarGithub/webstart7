@@ -19,7 +19,7 @@ body {
 }
 
 .hero__title {
-  padding: 180px 0 80px 0;
+  margin: 100px 0 80px 0;
   text-align: center;
 }
 
@@ -28,7 +28,7 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   max-width: 1180px;
-  padding-bottom: 360px;
+  margin-bottom: 100px;
 }
 
 .hero__cards {
@@ -49,22 +49,30 @@ body {
 }
 
 .text {
+
+}
+
+.item__text {
   display: block;
   font-size: 18px;
   line-height: 22px;
   font-weight: 500;
   text-transform: uppercase;
   color: #666666;
-}
-
-.item__text {
   text-align: center;
   padding-bottom: 30px;
+}
+
+.button-wrap{
+  display: flex;
+  justify-content: space-between;
 }
 
 .button {
   display: inline;
   border: 2.0px solid #66cc66;
+  /* padding: 11px 0; */
+  /* width: 133px; */
 }
 
 .item__button-details {
@@ -72,13 +80,13 @@ body {
 }
 
 .button--details {
-  padding: 11px 23px;
+  padding: 11px  23px;
   color: #66cc66;
   background-color:transparent;
 }
 
 .button--success {
-  padding: 11px 32px;
+  padding: 11px  32px;
   color: #ffffff;
   background-color: #66cc66;;
 }
