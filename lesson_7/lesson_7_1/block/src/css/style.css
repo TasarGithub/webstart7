@@ -50,7 +50,7 @@ h1 {
 }
 
 .article {
-  flex-shrink:2;
+  /* flex-shrink:2; */
   display: flex;
   justify-content: space-between;
 
