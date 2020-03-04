@@ -1,9 +1,9 @@
 body {
   box-sizing: border-box;
+  background-color: #f6f6f6;
 }
 
 .hero {
-  background-color: #f6f6f6;
   font-family: sans-serif;
 }
 
@@ -79,5 +79,3 @@ body {
   color: #ffffff;
   background-color: #66cc66;;
 }
-
-
