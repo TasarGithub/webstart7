@@ -24,20 +24,19 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  max-width: 1180px;
-  padding-bottom: 360px;
 }
 
 .hero__cards {
+  max-width: 1180px;
+  padding-bottom: 360px;
   margin: auto;
 }
 
 .item {
-  padding-bottom: 60px;
+  max-width: 276px;
 }
 .cards__item{
-  max-width: 276px;
-
+  padding-bottom: 60px;
 }
 
 .item__foto {
@@ -46,7 +45,6 @@ body {
 }
 
 .text {
-  display: block;
   font-size: 18px;
   line-height: 22px;
   font-weight: 500;
@@ -55,16 +53,17 @@ body {
 }
 
 .item__text {
+  display: block;
   text-align: center;
   padding-bottom: 30px;
 }
 
 .button {
-  display: inline;
   border: 2.0px solid #66cc66;
 }
 
 .button--details {
+  display: inline;
   padding: 11px 23px;
   color: #66cc66;
   background-color:transparent;
@@ -72,6 +71,7 @@ body {
 }
 
 .button--success {
+  display: inline;
   padding: 11px 32px;
   color: #ffffff;
   background-color: #66cc66;;
