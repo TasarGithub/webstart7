@@ -1,0 +1,38 @@
+.item__foto {
+  margin: auto;
+  padding-bottom: 30px;
+}
+
+.text {
+  text-align: center;
+  /* font-size: 19px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #1a1820; */
+}
+/* 
+.item__text {
+
+  padding-bottom: 30px;
+} */
+
+.button {
+  display: inline;
+  border: 2.0px solid #66cc66;
+}
+
+.item__button-details {
+  margin-right: 10px;
+}
+
+.button--details {
+  padding: 11px 23px;
+  color: #66cc66;
+  background-color:transparent;
+}
+
+.button--success {
+  padding: 11px 32px;
+  color: #ffffff;
+  background-color: #66cc66;;
+}
