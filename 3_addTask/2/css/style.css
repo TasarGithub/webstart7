@@ -18,7 +18,7 @@ body {
 }
 
 
-.hero__container, .add-service__container {
+.services__container, .addservices__container {
   padding-top: 120px;
   padding-bottom: 120px;
   margin-bottom: 50px;
@@ -50,7 +50,7 @@ body {
 }
 
 
-.cards {
+.wrap {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -58,7 +58,7 @@ body {
 }
 
 
-.hero__cards {
+.services__wrap {
   margin: auto;
   max-width: 1275px;
 }
@@ -66,14 +66,13 @@ body {
 .item {
   
 }
-.cards-service__item{
-  /* padding-bottom: 60px; */
+.service__item{
   max-width: 400px;
   width: 100%;
   min-height: 661px;
 }
 
-.item--cards-service{
+.service--item{
   background-color: #ffffff;
   box-shadow: 7px 12px 21px 0px rgba(0,0,0,0.17);
 }
@@ -89,15 +88,10 @@ body {
 
 .foto {
   display: block;
-
 }
 
 .item__foto {
   margin: auto;
-}
-
-.add-service__container {
-  margin-bottom: 45px;
 }
 
 .price {
@@ -169,7 +163,7 @@ color: #1a1820;
   margin-top: 35px;
 }
 
-.add-service__cards {
+.addservices__wrap {
   max-width: 1200px;
   margin: auto;
 }
