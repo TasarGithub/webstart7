@@ -36,7 +36,7 @@ function bs() {
 
 // Compile sass into CSS & auto-inject into browsers
 function servSass() {
-  return src("./scss/*.scss")
+  return src("./sass/*.sass")
       .pipe(sass())
       .pipe(dest("./css"))
       .pipe(browserSync.stream());
