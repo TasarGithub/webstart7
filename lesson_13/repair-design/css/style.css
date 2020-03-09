@@ -386,6 +386,9 @@ template {
     background-color: #131313; }
   .hero__content {
     max-width: 670px; }
+  .hero__text {
+    font-size: 22px;
+    max-width: 500px; }
 
 .instagram {
   display: flex;
