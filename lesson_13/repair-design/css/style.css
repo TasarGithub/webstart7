@@ -388,6 +388,15 @@ template {
     text-transform: uppercase;
     color: #fff;
     background-color: #131313; }
+    .hero__scroll-down::after {
+      content: '';
+      background: url("../img/arrow-down.svg") no-repeat center;
+      width: 30px;
+      height: 30px;
+      border: 2px solid #e3b873;
+      border-radius: 50%;
+      background-color: #131313;
+      margin-left: 12px; }
   .hero__content {
     max-width: 670px; }
   .hero__text {

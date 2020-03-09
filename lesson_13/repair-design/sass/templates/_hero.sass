@@ -26,6 +26,15 @@
     text-transform: uppercase
     color: $light
     background-color: $dark
+    &::after
+      content: ''
+      background: url('../img/arrow-down.svg') no-repeat center
+      width: 30px
+      height: 30px
+      border: 2px solid $primary
+      border-radius: 50%
+      background-color: $dark
+      margin-left: 12px
   &__content
     max-width: 670px
   &__text
