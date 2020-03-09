@@ -34,3 +34,20 @@
                 <li class="service__more">Гарантия 2 года</li>
                 <li class="service__more">Можно сразу клеить обои</li>
               </ul>
+
+
+
+// Static server
+function bs() {
+  servSass ();
+  browserSync.init({
+      server: {
+          baseDir: "./"
+      }
+  });
+  watch("./*.html").on('change', browserSync.reload);
+
+  watch("./sass/**/*.sass").on({ events: "change", delay: 500 }, servSass);
+  watch("./sass/**/*.scss").on({ events: "change", delay: 500 }, servSass);
+  watch("./js/*.js").on({ events: "change", delay: 500 }, browserSync.reload);
+}
