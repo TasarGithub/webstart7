@@ -404,6 +404,7 @@ template {
       background-color: #131313;
       margin-left: 12px; }
   .hero__content {
+    position: relative;
     max-width: 670px; }
   .hero__text {
     font-size: 22px;
