@@ -21,31 +21,28 @@
     list-style: none; }
     .footer ul li {
       line-height: 32px; }
-
-.foter-policy-link {
-  font-size: 12px; }
-
-.footer-contacts, .footer-social-links {
-  text-align: right; }
-
-.footer-social-links {
-  text-align: right; }
-  .footer-social-links li {
-    display: inline-block; }
-    .footer-social-links li a {
-      display: inline-block;
-      width: 42px;
-      height: 42px;
-      text-align: center;
-      border-radius: 50%;
-      line-height: 42px;
-      margin-left: 10px;
-      -webkit-transition: all 0.2s;
-      transition: all 0.2s; }
-      .footer-social-links li a:hover {
-        color: #131313; }
-
-.footer-contacts_phone {
-  font-weight: 400;
-  font-size: 20px;
-  color: #009adf; }
+  .footer-policy-link {
+    font-size: 12px; }
+  .footer-contacts, .footer-social-links {
+    text-align: right; }
+  .footer-contacts_phone {
+    font-weight: 400;
+    font-size: 20px;
+    color: #009adf; }
+  .footer-social-links {
+    text-align: right; }
+    .footer-social-links li {
+      display: inline-block; }
+      .footer-social-links li a {
+        display: inline-block;
+        width: 42px;
+        height: 42px;
+        text-align: center;
+        border-radius: 50%;
+        line-height: 42px;
+        margin-left: 10px;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s; }
+        .footer-social-links li a:hover {
+          background: rgba(255, 255, 255, 0.9);
+          color: #131313; }
