@@ -7,6 +7,12 @@
   background: $dark url('../img/hero-bg.jpg') no-repeat center / cover
   height: 100vh
   color: $light
+  &::before
+    content: ''
+    position: absolute
+    height: 100%
+    width: 100%
+    background-color: rgba($dark, 0.7)
   &__instagram
     position: absolute
     top: 0

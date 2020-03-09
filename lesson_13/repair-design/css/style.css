@@ -369,6 +369,12 @@ template {
   background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
   height: 100vh;
   color: #fff; }
+  .hero::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(19, 19, 19, 0.7); }
   .hero__instagram {
     position: absolute;
     top: 0;
