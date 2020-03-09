@@ -330,6 +330,10 @@ template {
   .button--primary {
     background-color: #e3b873;
     color: #fff; }
+  .button--outline {
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff; }
 
 .header {
   position: fixed;
@@ -389,6 +393,8 @@ template {
   .hero__text {
     font-size: 22px;
     max-width: 500px; }
+  .hero__button {
+    margin-right: 20px; }
 
 .instagram {
   display: flex;
