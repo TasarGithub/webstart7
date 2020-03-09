@@ -354,7 +354,10 @@ template {
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
-    margin-right: 40px; }
+    margin-right: 40px;
+    transition: color 0.2s; }
+    .header .nav__item:hover {
+      color: #e3b873; }
   .header .phone {
     color: #e3b873; }
   .header .contacts__phone {
