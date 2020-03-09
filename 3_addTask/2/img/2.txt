@@ -51,3 +51,39 @@ function bs() {
   watch("./sass/**/*.scss").on({ events: "change", delay: 500 }, servSass);
   watch("./js/*.js").on({ events: "change", delay: 500 }, browserSync.reload);
 }
+
+
+  .section-title__image {
+    display: flex;
+    justify-content: center; }
+    .section-title__image::befor, .section-title__image::after {
+      content: '';
+      width: 32px;
+      height: 2px;
+      background-color: #e3b873;
+
+
+
+
+
+      margin: 0 10px; }
+
+
+
+
+
+.section
+  &-title
+    text-align: center
+    text-transform: uppercase
+    font-family: 'Yeseva One', cursive
+    &__image
+      display: flex
+      justify-content: center
+      align-items: center
+      &::befor, &::after
+        content: ''
+        width: 32px
+        height: 2px
+        background-color: $primary
+        margin: 0 10px
