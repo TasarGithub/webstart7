@@ -7,14 +7,14 @@
   background: $dark url('../img/hero-bg.jpg') no-repeat center / cover
   height: 100vh
   color: $light
-  // &::before
-  //   content: ''
-  //   position: absolute
-  //   top: 0
-  //   left: 0
-  //   height: 100%
-  //   width: 100%
-  //   background-color: rgba($dark, 0.7)
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    background-color: rgba($dark, 0.7)
   &__instagram
     position: absolute
     top: 0
@@ -34,15 +34,15 @@
     text-transform: uppercase
     color: $light
     background-color: $dark
-    // &::after
-    //   content: ''
-    //   background: url('../img/arrow-down.svg') no-repeat center
-    //   width: 30px
-    //   height: 30px
-    //   border: 2px solid $primary
-    //   border-radius: 50%
-    //   background-color: $dark
-    //   margin-left: 12px
+    &::after
+      content: ''
+      background: url('../img/arrow-down.svg') no-repeat center
+      width: 30px
+      height: 30px
+      border: 2px solid $primary
+      border-radius: 50%
+      background-color: $dark
+      margin-left: 12px
   &__content
     position: relative
     max-width: 670px
