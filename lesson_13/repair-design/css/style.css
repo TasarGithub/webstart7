@@ -317,12 +317,7 @@ template {
 [hidden] {
   display: none; }
 
-.container {
-  width: 85%;
-  max-width: 1256px;
-  margin: auto; }
-
-*, *::befor, *::after {
+*, *::before, *::after {
   box-sizing: border-box; }
 
 body {
@@ -343,6 +338,11 @@ body {
       height: 2px;
       background-color: #e3b873;
       margin: 0 10px; }
+
+.container {
+  width: 85%;
+  max-width: 1256px;
+  margin: auto; }
 
 .button {
   padding: 13px 20px;
@@ -400,14 +400,6 @@ body {
   background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
   height: 100vh;
   color: #fff; }
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(19, 19, 19, 0.7); }
   .hero__instagram {
     position: absolute;
     top: 0;
@@ -427,15 +419,6 @@ body {
     text-transform: uppercase;
     color: #fff;
     background-color: #131313; }
-    .hero__scroll-down::after {
-      content: '';
-      background: url("../img/arrow-down.svg") no-repeat center;
-      width: 30px;
-      height: 30px;
-      border: 2px solid #e3b873;
-      border-radius: 50%;
-      background-color: #131313;
-      margin-left: 12px; }
   .hero__content {
     position: relative;
     max-width: 670px; }
@@ -469,6 +452,7 @@ body {
   margin: 0;
   font-family: 'Yeseva One', cursive;
   text-transform: uppercase;
-  font-size: 40px; }
+  font-size: 40px;
+  font-weight: 400; }
   .title--primary {
     color: #e3b873; }
