@@ -4,6 +4,8 @@ const cleanCSS = require('gulp-clean-css');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 const wait = require('gulp-wait');
+const autoprefixer = require('gulp-autoprefixer');
+
 
 // gulp.task('hello', function(done){
 //   console.log('Привет, мир');
@@ -16,6 +18,9 @@ function servSass() {
   return src("./sass/**/*.sass", "./sass/**/*.scss")
       .pipe(wait(400))
       .pipe(sass())
+      .pipe(autoprefixer({
+        cascade: false
+      }))
       .pipe(dest("./css"))
       .pipe(browserSync.stream());
 }

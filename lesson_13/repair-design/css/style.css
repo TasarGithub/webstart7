@@ -88,6 +88,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   /* 2 */ }
 
@@ -356,10 +357,11 @@ body {
   .button--primary {
     background-color: #e3b873;
     color: #fff;
-    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.4);
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
     transition: box-shadow 0.4s; }
     .button--primary:hover {
-      box-shadow: none; }
+      box-shadow: none;
+      background-color: #dba249; }
   .button--outline {
     border: 1px solid #fff;
     background-color: transparent;
@@ -379,7 +381,8 @@ body {
     align-items: center; }
   .header .logo {
     color: #e3b873;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-decoration: none; }
   .header .nav__item {
     text-decoration: none;
     color: #fff;
