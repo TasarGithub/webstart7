@@ -379,31 +379,26 @@ body {
   z-index: 99;
   background-color: #131313;
   padding: 24px 0; }
-
-.menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-
-.logo {
-  color: #e3b873;
-  text-transform: uppercase;
-  text-decoration: none; }
-
-.nav__item {
-  text-decoration: none;
-  color: #fff;
-  text-transform: uppercase;
-  margin-right: 2.857px;
-  transition: color 0.2s; }
-  .nav__item:hover {
+  .header .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .header .logo {
+    color: #e3b873;
+    text-transform: uppercase;
+    text-decoration: none; }
+  .header .nav__item {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    margin-right: 2.857px;
+    transition: color 0.2s; }
+    .header .nav__item:hover {
+      color: #e3b873; }
+  .header .phone {
     color: #e3b873; }
-
-.phone {
-  color: #e3b873; }
-
-.contacts__phone {
-  margin: 45px; }
+  .header .contacts__phone {
+    margin: 45px; }
 
 .hero {
   position: relative;
@@ -435,8 +430,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 17.6rem;
-    min-height: 6.92rem;
+    min-width: 247px;
+    min-height: 97px;
     text-decoration: none;
     text-transform: uppercase;
     color: #fff;
@@ -492,11 +487,11 @@ body {
 @media screen and (max-width: 1200px) {
   html {
     font-size: 12px; }
-  .header .nav__item {
+  .nav__item {
     margin-right: 1rem; } }
 
 @media screen and (max-width: 992px) {
-  .header .nav {
+  .nav {
     display: none; }
   .hero__instagram {
     display: none; }
@@ -505,9 +500,9 @@ body {
 
 @media screen and (max-width: 570px) {
   .contacts__phone {
-    margin-right: 0;
+    margin-right: 0 !important;
     text-decoration: none;
-    color: #fff; }
+    color: #fff !important; }
   .contacts__button {
     display: none; }
   .title {
@@ -515,11 +510,4 @@ body {
   .hero__content {
     min-width: 22.86rem; }
   .hero__text {
-    font-size: 1.29rem;
-    margin-bottom: 2.28rem; }
-  .hero__button {
-    display: block;
-    min-width: 22.86rem;
-    margin-bottom: 1.85rem; }
-  .hero__scroll-down {
-    display: none; } }
+    font-size: 1.29rem; } }
