@@ -4,31 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
-  <title>3addTask-1</title>
+  <title>6addTask</title>
+
 </head>
 <body>
   <div class="modal">
-    <div class="modal__dialog">
+
 
       <form action="" class="form modal__form">
-        <label for="user-email" class="label form__label label--light">Email</label>
-        <input type="email" class="input form__input modal__input" id="user-name" placeholder="hhhhh@jjjj.com">
+        <div class="calltoaction">
+          Create an account
+        </div>
+            <!-- /.calltoaction -->
+        <label for="user-email" class="label form__label">Email: <span>*</span></label>
+        <input type="email" class="input form__input" id="user-name" placeholder="johnsmit@gmail.com">
 
-        <label for="choose-password" class="label form__label label--light">Choose password <sup>*</sup></label>
-        <input type="text" class="input form__input modal__input" id="choose-password" placeholder="">
+        <label for="choose-password" class="label form__label">Choose Password: <span>*</span></label>
+        <input type="text" class="input form__input" id="choose-password">
 
-        <label for="confirm-password" class="label form__label label--light">Confirm Password <sup>*</sup></label>
-        <input type="text" class="input form__input modal__input" id="confirm-password"" placeholder="">
+        <label for="confirm-password" class="label form__label">Confirm Password: <span>*</span></label>
+        <input type="text" class="input form__input" id="confirm-password"">
 
-
-        <!-- /.policy -->
-        <button class="button button--primary modal__button">
+        <button class="button form__button">
           REGISTER NOW!
         </button>
       </form>
       <!-- /.form modal__form -->
-    </div>
-    <!-- /.modal-dialog -->
   </div>
 </body>
 </html>
