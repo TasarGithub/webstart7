@@ -332,7 +332,7 @@ img {
   max-width: 100%; }
 
 .section {
-  padding: 60px; }
+  padding: 60px 0; }
   .section-title {
     text-align: center;
     text-transform: uppercase;
@@ -376,6 +376,48 @@ img {
     border: 1px solid #fff;
     background-color: transparent;
     color: #fff; }
+
+.label {
+  font-size: 1.07rem; }
+  .label--light {
+    color: rgba(255, 255, 255, 0.5); }
+
+.input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+  outline-color: #e3b873;
+  font-size: 1.285rem;
+  color: #fff;
+  padding: 0.5rem 0; }
+  .input::-webkit-input-placeholder {
+    color: #fff; }
+  .input::-moz-placeholder {
+    color: #fff; }
+  .input:-ms-input-placeholder {
+    color: #fff; }
+  .input::-ms-input-placeholder {
+    color: #fff; }
+  .input::placeholder {
+    color: #fff; }
+
+.policy__checkbox {
+  opacity: 0;
+  visibility: hidden; }
+  .policy__checkbox:checked + .policy__label::before {
+    background: #e3b873 url(../img/check.svg) no-repeat center/0.8rem; }
+
+.policy__label {
+  display: flex;
+  align-items: center; }
+  .policy__label::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border: 1px solid #e3b873;
+    border-radius: 1px;
+    cursor: pointer;
+    margin-right: 0.64rem; }
 
 .header {
   position: fixed;
@@ -508,7 +550,8 @@ img {
   flex-basis: 32%; }
 
 .card {
-  position: relative; }
+  position: relative;
+  min-width: 17rem; }
   .card__text {
     position: relative;
     margin: 0 auto;
@@ -537,21 +580,74 @@ img {
     bottom: -1.79rem;
     font-size: 1.29rem;
     font-family: 'Yeseva One', cursive;
+    font-weight: 400;
     text-transform: uppercase;
     background-color: #e3b873;
     color: #fff;
     padding: 1.214rem 2.6rem; }
 
-@media screen and (max-width: 1290px) {
-  html {
-    font-size: 13px; } }
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 199;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 19, 19, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .modal--visible {
+    opacity: 1;
+    visibility: visible; }
+  .modal__dialog {
+    position: relative;
+    max-width: 36.36rem;
+    background: #131313 url("../img/bg-lines.svg") no-repeat center;
+    padding: 2.357rem 3.5rem 1.928rem;
+    color: #fff; }
+  .modal__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    background: transparent url("../img/close.svg") no-repeat center;
+    border: none;
+    margin: 12px;
+    cursor: pointer; }
+  .modal__title {
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.357rem;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 2.428rem; }
+  .modal__form {
+    display: flex;
+    flex-direction: column; }
+  .modal__input {
+    margin-bottom: 3.428rem; }
+    .modal__input:last-of-type {
+      margin-bottom: 1rem; }
+  .modal__policy {
+    margin-bottom: 2.7rem; }
+  .modal__button {
+    align-self: flex-end; }
+
+@media screen and (max-width: 1350px) {
+  .nav__item {
+    margin-right: 1.8rem; } }
 
 @media screen and (max-width: 1200px) {
   html {
     font-size: 12px; }
-  .header .logo {
+  .logo {
     margin-right: 1rem; }
-  .header .nav__item {
+  .nav__item {
     margin-right: 1rem; }
   .hero__button {
     font-size: 1.08rem; }
@@ -565,7 +661,7 @@ img {
     font-size: 1.92rem; } }
 
 @media screen and (max-width: 992px) {
-  .header .nav {
+  .nav {
     display: none; }
   .card__text {
     margin-top: -4.3rem; }
@@ -574,6 +670,20 @@ img {
 
 @media screen and (max-width: 790px) {
   .row {
+    flex-wrap: wrap; }
+  .col {
+    flex-basis: 45%; }
+    .col:nth-child(3) {
+      margin: 0 auto; }
+  .hero__instagram {
+    display: none; }
+  .types__card {
+    margin-bottom: 5rem; } }
+
+@media screen and (max-width: 570px) {
+  .container {
+    width: 92%; }
+  .row {
     flex-direction: column;
     align-items: center; }
   .types__card {
@@ -581,13 +691,12 @@ img {
   .card__text {
     margin-left: 0; }
   .card__pricetag {
-    font-size: 1.25rem; } }
-
-@media screen and (max-width: 570px) {
-  .container {
-    width: 92%; }
+    font-size: 1.25rem; }
+  .card__image {
+    width: 100%;
+    max-width: 340px; }
   .contacts__phone {
-    margin-right: 0.83rem;
+    margin-right: 0;
     text-decoration: none;
     color: #fff; }
   .contacts__button {
@@ -611,8 +720,6 @@ img {
       max-width: 28.33rem;
       width: 100%; }
     .hero__scroll-down {
-      display: none; }
-    .hero__instagram {
       display: none; }
   .title {
     line-height: 132.83%; } }

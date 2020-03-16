@@ -8,9 +8,12 @@
 
 .col
   flex-basis: 32%
+  //width: 100% // чтобы карточка растягивалась полностью под контейнер
+  // margin: 0 auto
 
 .card
   position: relative
+  min-width: 17rem  //устранение бага наезда и ломки флекс-карточек при сжатии
   &__text
     position: relative
     margin: 0 auto
@@ -39,6 +42,7 @@
     bottom: -1.79rem
     font-size: 1.29rem
     font-family: 'Yeseva One', cursive
+    font-weight: 400
     text-transform: uppercase
     background-color: $primary
     color: $light
