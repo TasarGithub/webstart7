@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+.section {
+  min-height: 100vh;
+  text-align: center;
+  width: 100%;
+  display: table;
+  /* background: url('../img/ocean.jpg') no-repeat center / cover; */
+}
+.wrap-block{
+  display: table-cell;
+  vertical-align: middle;
+  color: #ffffff;
+}
