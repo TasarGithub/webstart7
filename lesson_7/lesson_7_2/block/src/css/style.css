@@ -2,29 +2,44 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 18px;
+}
 
 body {
-  /* height: 100%; */
+  font-family: Tahoma;
   background-color: #f6f6f6;
-  /* margin: 0; */
-  font-family: Arial, Helvetica, sans-serif;
-  /* height: 200vh; */
+}
+
+.flex-example{
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  background-color: #ccc;
+
+  display: flex;
+  justify-content: center;
+  justify-items: center ;
 }
 
 .card {
   display: flex;
   justify-items: center;
   align-items: center;
+  justify-content: space-between;
+  padding: 7rem 0;
 }
-.img-book{
-  width: 40%;
+.card__img-book{
+  width: 42%;
+  max-width: 22rem;
+  max-height: 630rem;
 }
 .description {
-  width: 60%;
+  width: 58%;
+  padding-right: 20rem;
 }
 
 .description__title {
-  font-family: Tahoma;
   font-size: 48px;
   line-height: 1.2;
   font-weight: 700;
@@ -32,7 +47,6 @@ body {
 }
 
 .description__subtitle {
-  font-family: Tahoma;
   font-size: 30px;
   line-height: 1.2;
   font-weight: 400;
@@ -40,8 +54,8 @@ body {
 }
 
 .description__text{
-  font-family: Tahoma;
-  font-size: 18px;
+  
+  font-size: 1rem;
   line-height: 27px;
   font-weight: 400;
   color: #000000;
@@ -53,7 +67,7 @@ body {
   padding-top: 50px;
   padding-bottom: 60px;
   display: block;
-  font-family: Tahoma;
+  
   font-size: 48px;
   line-height: 27px;
   font-weight: 400;
@@ -63,7 +77,7 @@ body {
 .button {
   border: 2.0px solid #f05a22;
   border-radius: 5.0px;
-  font-family: Tahoma;
+  
   font-size: 24px;
   line-height: 27px;
   font-weight: 700;
