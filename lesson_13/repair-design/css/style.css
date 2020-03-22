@@ -830,6 +830,26 @@ input.invalid {
   .footer__menu {
     background-color: #131313;
     padding: 4.285rem 0; }
+  .footer__contacts {
+    max-width: 42.07rem;
+    margin: 0 auto; }
+  .footer-contacts__text {
+    text-align: center;
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.428rem;
+    line-height: 2rem;
+    text-transform: uppercase;
+    color: #e3b873; }
+  .footer-contacts__digital {
+    margin: 0 auto;
+    max-width: 5.07rem;
+    display: flex;
+    justify-content: space-between; }
+
+.contacts-digital {
+  max-width: 2rem; }
 
 .modal {
   opacity: 0;
