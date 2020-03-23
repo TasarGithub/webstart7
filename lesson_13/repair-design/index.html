@@ -362,21 +362,21 @@
       <div class="footer__wrap">
         <h3 class="footer__title">Остались вопросы?</h3>
         <form action="" class="form footer__form">
-          <div class="input-group footer__input-group">
+          <div class="footer__input-group">
             <label for="user-name" class="label form__label label--light">Имя</label>
             <input type="text" name="userName" class="input form__input footer__input input--light" id="user-name" placeholder="Как вас зовут:">
           </div>
-          <!-- /.input-group footer__input-group -->
-          <div class="input-group footer__input-group">
+          <!-- /.footer__input-group -->
+          <div class="footer__input-group">
             <label for="user-phone" class="label form__label label--light">Телефон</label>
             <input type="tel" name="userPhone" class="input form__input footer__input input--light" id="user-phone" placeholder="Ваш номер телефона:">
           </div>
-          <!-- /.input-group footer__input-group -->
-          <div class="input-group footer__input-group footer__input-group--full-width">
+          <!-- /.footer__input-group -->
+          <div class="footer__input-group footer__input-group--full-width">
             <label for="user-question" class="label form__label label--light">Вопрос</label>
             <input type="text" class="input form__input footer__input input--light" id="user-question" placeholder="Я хочу спросить:">            
           </div>
-          <!-- /.input-group footer__input-group -->                    
+          <!-- /.footer__input-group -->                    
 
           <div class="policy footer__policy">
             <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class=policy__checkbox checked>
@@ -389,21 +389,23 @@
         </form>
       </div>
       <div class="footer__contacts">
-        <p class="footer-contacts__text">
+        <p class="footer__text-contacts">
           Ростов на дону, Торговый центр Plaza
           Прямой телефон +7 (999) 768 32 99
         </p>
-        <div class="footer-contacts__digital">
-          <img src="img/email-icon.svg" alt="email" class=contacts-digital>
-          <img src="img/instagram-icon.svg" alt="instagram" class=contacts-digital>
+        <!-- /.footer__text -->
+        <div class="footer__digital-contacts">
+          <img src="img/email-icon.svg" alt="email" class=footer__digital-contacts-img>
+          <img src="img/instagram-icon.svg" alt="instagram" class=footer__digital-contacts-img>
         </div>
       </div>
-      <!-- /.footer__text -->
       <!-- /.footer-wrap -->
-      <div class="map footer__map">
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae30358ccd88ec514533d46b0d362610545fcd9b03ec2f369e45bd04a3c70a6f3&amp;width=100%25&amp;height=465&amp;lang=ru_RU&amp;scroll=true"></script>
+
+      <div class="map footer__map" id="map">
+
       </div>
       <!-- /.map footer__map -->
+
     </div>
     <!-- /.container -->
     <div class="footer__menu">
@@ -436,21 +438,21 @@
       <button class="modal__close"></button>
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами </h3>
       <form action="" class="form modal__form">
-        <div class="input-group modal__input-group">
+        <div class="modal__input-group">
           <label for="user-name" class="label form__label label--light">Имя</label>
           <input type="text" name="userName" class="input form__input modal__input input--light" id="user-name" placeholder="Как вас зовут:">
         </div>
-        <!-- /.input-group modal__input-group -->
-        <div class="input-group modal__input-group">
+        <!-- /.modal__input-group -->
+        <div class="modal__input-group">
           <label for="user-phone" class="label form__label label--light">Телефон</label>
           <input type="tel" name="userPhone" class="input form__input modal__input input--light" id="user-phone" placeholder="Ваш номер телефона:">
         </div>
-        <!-- /.input-group modal__input-group -->
-        <div class="input-group modal__input-group">
+        <!-- /.modal__input-group -->
+        <div class="modal__input-group">
           <label for="user-email" class="label form__label label--light">Email</label>
           <input type="email" name="userEmail" class="input form__input modal__input input--light" id="user-email" placeholder="Ваш Email:">
         </div>
-        <!-- /.input-group modal__input-group -->
+        <!-- /.modal__input-group -->
 
         <div class="policy modal__policy">
           <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class=policy__checkbox checked>
@@ -472,6 +474,8 @@
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+  </script>
   <script src="js/main.js"></script>
 
 </body>
