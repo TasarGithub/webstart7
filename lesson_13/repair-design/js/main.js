@@ -58,6 +58,11 @@ $(document).ready(function () {
   // Валидация форм
   //, .footer__form, .control__form
 
+  //Замена встроенного меторда проверки емейла на лучший , с проверкой точки
+  $.validator.methods.email = function( value, element ) {
+    return this.optional( element ) || /[a-z]+@[a-z]+\.[a-z]+/.test( value );
+  };
+
   $('.modal__form').validate({
     errorClass: "invalid",
     errorElement: "div",
@@ -100,6 +105,25 @@ $(document).ready(function () {
       modalPolicyCheckbox: {
         required: "Заполните поле"
       }
+    },
+
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          // console.log('Ajax сработал. Ответ сервера: ' + response);
+          alert('Форма отправлена, мы свяжемся с вами через 10 минут');
+          $('form')[2].reset();
+          // modal.toggleClass('modal--visible');
+          modal.removeClass('modal--visible');
+        },
+        erorr: function(responce) {
+          console.error('Ошибка запроса' + responce);
+        }
+        
+      });
     }
   });
 
@@ -144,12 +168,21 @@ $(document).ready(function () {
       controlPolicyCheckbox: {
         required: "Заполните поле"
       }
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log('Ajax сработал. Ответ сервера: ' + response);
+        }
+      });
     }
+
   });
-  
-  $.validator.methods.email = function( value, element ) {
-    return this.optional( element ) || /[a-z]+@[a-z]+\.[a-z]+/.test( value );
-  };
+
+
 
   $('.footer__form').validate({
       errorClass: "invalid",
@@ -192,13 +225,23 @@ $(document).ready(function () {
         footerPolicyCheckbox: {
           required: "Заполните поле"
         }
+      },
+
+      submitHandler: function(form) {
+        $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $(form).serialize(),
+          success: function (response) {
+            console.log('Ajax сработал. Ответ сервера: ' + response);
+          }
+        });
       }
-    
 
   });
 
 
-  
+
 
   //$('.phone').mask('0000-0000');
   // маска для телефона
