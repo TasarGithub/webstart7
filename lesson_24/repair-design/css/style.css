@@ -436,7 +436,8 @@ h1, h2, h3, h4, strong {
   outline-color: #e3b873;
   font-size: 1.285rem;
   color: #fff;
-  padding: 0.5rem 0; }
+  padding: 0.5rem 0;
+  width: 100%; }
   .input--light::-webkit-input-placeholder {
     color: #fff; }
   .input--light::-moz-placeholder {
@@ -448,35 +449,51 @@ h1, h2, h3, h4, strong {
   .input--light::placeholder {
     color: #fff; }
 
-.policy__checkbox {
-  opacity: 0;
-  visibility: hidden; }
-  .policy__checkbox:checked + .policy__label::before {
-    background: #e3b873 url(../img/check.svg) no-repeat center/0.8rem; }
-
-.policy__label {
-  display: flex;
-  align-items: center;
-  font-size: 1.142rem; }
-  .policy__label::before {
-    content: '';
-    width: 18px;
-    height: 18px;
-    border: 1px solid #e3b873;
-    border-radius: 1px;
-    cursor: pointer;
-    margin-right: 0.64rem; }
-  .policy__label--center {
-    justify-content: center; }
+.policy {
+  position: relative; }
+  .policy__checkbox {
+    opacity: 0;
+    visibility: hidden; }
+    .policy__checkbox:checked ~ .policy__label::before {
+      background: #e3b873 url(../img/check.svg) no-repeat center/0.8rem; }
+  .policy__label {
+    display: flex;
+    align-items: center;
+    font-size: 1.142rem; }
+    .policy__label::before {
+      content: '';
+      width: 18px;
+      height: 18px;
+      border: 1px solid #e3b873;
+      border-radius: 1px;
+      cursor: pointer;
+      margin-right: 0.64rem; }
+    .policy__label--center {
+      justify-content: center; }
 
 label.invalid {
   color: tomato; }
 
-div.invalid {
+.invalid {
   color: tomato; }
 
 input.invalid {
   border-bottom: 1px solid tomato; }
+
+#modalPolicyCheckbox-error {
+  position: absolute;
+  left: 7%;
+  bottom: -1.3rem; }
+
+#footerPolicyCheckbox-error {
+  position: absolute;
+  left: 30%;
+  bottom: -1.3rem; }
+
+#controlPolicyCheckbox-error {
+  position: absolute;
+  left: 36.5%;
+  bottom: -1.3rem; }
 
 .header {
   position: fixed;
@@ -830,6 +847,31 @@ input.invalid {
   .footer__menu {
     background-color: #131313;
     padding: 4.285rem 0; }
+  .footer__contacts {
+    max-width: 38.07rem;
+    margin: 0 auto;
+    margin-bottom: 3rem; }
+  .footer__text-contacts {
+    text-align: center;
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.428rem;
+    line-height: 2rem;
+    text-transform: uppercase;
+    color: #e3b873; }
+  .footer__digital-contacts {
+    margin: 0 auto;
+    max-width: 5.07rem;
+    display: flex;
+    justify-content: space-between; }
+  .footer__digital-contacts-img {
+    max-width: 2rem; }
+  .footer__map {
+    min-height: 465px;
+    margin: auto;
+    max-width: 66.07rem;
+    margin-bottom: 4.64rem; }
 
 .modal {
   opacity: 0;

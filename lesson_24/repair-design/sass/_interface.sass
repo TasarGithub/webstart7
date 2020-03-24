@@ -32,14 +32,19 @@
   font-size: 1.285rem
   color: $light
   padding: 0.5rem 0
+  width: 100%
   &--light
     &::placeholder
       color: $light
 .policy
+  position: relative
+  // display: flex
+  // flex-direction: column
+  // align-items: center
   &__checkbox
     opacity: 0
     visibility: hidden
-    &:checked +
+    &:checked ~
       .policy__label
         &::before
           background: $primary url(../img/check.svg) no-repeat center /0.8rem
@@ -60,13 +65,24 @@
 label
   &.invalid
     color: tomato
-div
-  &.invalid
-    color: tomato
+.invalid
+  color: tomato
 input
   &.invalid
     border-bottom: 1px solid tomato
     
-  
+#modalPolicyCheckbox-error
+  position: absolute
+  left: 7%
+  bottom: -1.3rem
+#footerPolicyCheckbox-error
+  position: absolute
+  left: 30%
+  bottom: -1.3rem
+
+#controlPolicyCheckbox-error
+  position: absolute
+  left: 36.5%
+  bottom: -1.3rem
 
 
