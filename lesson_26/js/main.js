@@ -58,6 +58,11 @@ $(document).ready(function () {
   // Валидация форм
   //, .footer__form, .control__form
 
+  //Замена встроенного меторда проверки емейла на лучший , с проверкой точки
+  $.validator.methods.email = function( value, element ) {
+    return this.optional( element ) || /[a-z]+@[a-z]+\.[a-z]+/.test( value );
+  };
+
   $('.modal__form').validate({
     errorClass: "invalid",
     errorElement: "div",
@@ -100,7 +105,26 @@ $(document).ready(function () {
       modalPolicyCheckbox: {
         required: "Заполните поле"
       }
-    }
+    },
+
+    // submitHandler: function(form) {
+    //   $.ajax({
+    //     type: "POST",
+    //     url: "send.php",
+    //     data: $(form).serialize(),
+    //     success: function (response) {
+    //       // console.log('Ajax сработал. Ответ сервера: ' + response);
+    //       alert('Форма отправлена, мы свяжемся с вами через 10 минут');
+    //       $('form')[2].reset();
+    //       // modal.toggleClass('modal--visible');
+    //       modal.removeClass('modal--visible');
+    //     },
+    //     erorr: function(responce) {
+    //       console.error('Ошибка запроса' + responce);
+    //     }
+        
+    //   });
+    // }
   });
 
   $('.control__form').validate({
@@ -144,8 +168,21 @@ $(document).ready(function () {
       controlPolicyCheckbox: {
         required: "Заполните поле"
       }
-    }
+    },
+    // submitHandler: function(form) {
+    //   $.ajax({
+    //     type: "POST",
+    //     url: "send.php",
+    //     data: $(form).serialize(),
+    //     success: function (response) {
+    //       console.log('Ajax сработал. Ответ сервера: ' + response);
+    //     }
+    //   });
+    // }
+
   });
+
+
 
   $('.footer__form').validate({
       errorClass: "invalid",
@@ -188,13 +225,23 @@ $(document).ready(function () {
         footerPolicyCheckbox: {
           required: "Заполните поле"
         }
-      }
-    
+      },
+
+      // submitHandler: function(form) {
+      //   $.ajax({
+      //     type: "POST",
+      //     url: "send.php",
+      //     data: $(form).serialize(),
+      //     success: function (response) {
+      //       console.log('Ajax сработал. Ответ сервера: ' + response);
+      //     }
+      //   });
+      // }
 
   });
 
 
-  
+
 
   //$('.phone').mask('0000-0000');
   // маска для телефона
@@ -202,37 +249,42 @@ $(document).ready(function () {
   
   
   // Яндекс карта с меткой с собственным изображением
-  ymaps.ready(function () {
-      var myMap = new ymaps.Map('map', {
-              center: [55.743676, 37.592230],
-              zoom: 15
-          }, {
-              searchControlProvider: 'yandex#search'
-          }),
 
-          // Создаём макет содержимого.
-          MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-              '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-          ),
 
-          myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-              hintContent: 'Офис Design repair LTD',
-              balloonContent: 'Парковка во дворе'
-          }, {
-              // Опции.
-              // Необходимо указать данный тип макета.
-              iconLayout: 'default#image',
-              // Своё изображение иконки метки.
-              iconImageHref: 'img/location.png',
-              // Размеры метки.
-              iconImageSize: [32, 32],
-              // Смещение левого верхнего угла иконки относительно
-              // её "ножки" (точки привязки).
-              iconImageOffset: [-5, -38]
-          });
 
-      myMap.geoObjects
-          .add(myPlacemark);
-  });
+
+
+  // ymaps.ready(function () {
+  //     var myMap = new ymaps.Map('map', {
+  //             center: [55.743676, 37.592230],
+  //             zoom: 15
+  //         }, {
+  //             searchControlProvider: 'yandex#search'
+  //         }),
+
+  //         // Создаём макет содержимого.
+  //         MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+  //             '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+  //         ),
+
+  //         myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+  //             hintContent: 'Офис Design repair LTD',
+  //             balloonContent: 'Парковка во дворе'
+  //         }, {
+  //             // Опции.
+  //             // Необходимо указать данный тип макета.
+  //             iconLayout: 'default#image',
+  //             // Своё изображение иконки метки.
+  //             iconImageHref: 'img/location.png',
+  //             // Размеры метки.
+  //             iconImageSize: [32, 32],
+  //             // Смещение левого верхнего угла иконки относительно
+  //             // её "ножки" (точки привязки).
+  //             iconImageOffset: [-5, -38]
+  //         });
+
+  //     myMap.geoObjects
+  //         .add(myPlacemark);
+  // });
 
 });
