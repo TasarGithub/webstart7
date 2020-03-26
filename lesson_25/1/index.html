@@ -42,8 +42,10 @@
           <h1 data-wow-delay="0.1s" data-wow-duration="1s" class="title hero__title wow fadeInUpBig">Турецкий ремонт в&nbsp;<span class="title--primary">Ростове-на-дону</span></h1>
           <p data-wow-delay="0.2s" data-wow-duration="2s" class="hero__text wow fadeInLeftBig">Получите готовый ремонт под ключ в срок с экономией рабочего времени до 45 дней и 20% от стоимости материалов за счет организации работы</p>
           <button data-wow-delay="0.5s" class="button hero__button button--primary wow fadeInLeftBig" data-toggle="modal">Расчитать стоимость</buttoncl>
-          <button data-wow-delay="1s" class="button hero__button button--outline wow fadeInLeftBig" data-toggle="modal">Расчитать заявку</button>
+          <button data-wow-delay="1s" class="button hero__button button--outline wow fadeInLeftBig" data-toggle="modal">Отправить заявку</button>
         </div>
+        <!-- /.hero__content -->
+
         <!-- /.hero__content -->
       </div>
       <!-- /.container -->
@@ -223,7 +225,7 @@
           </div>
           <!-- /.control__input-group -->
 
-          <button class="button button--primary control__button">
+          <button class="button button--primary control__button button--form">
             Отправить заявку
           </button>
           <div class="policy control__policy">
@@ -357,7 +359,7 @@
   </div>
   <!-- /.main -->
   <footer class="footer section--dark">
-    <div class="container">
+    <div class="container footer__container">
       <div class="footer__wrap">
         <h3 class="footer__title">Остались вопросы?</h3>
         <form action="send.php" class="form footer__form">
@@ -383,26 +385,27 @@
           </div>
 
           <!-- /.policy -->
-          <button class="button button--primary footer__button">
+          <button class="button button--primary footer__button button--form">
             Отправить
           </button>
         </form>
       </div>
+      <!-- /.footer-wrap -->
       <div class="footer__contacts">
         <p class="footer__text-contacts">
           Ростов на дону, Торговый центр Plaza
-          Прямой телефон +7&nbsp;(999)&nbsp;768&nbsp;32&nbsp;99
+          Прямой телефон <a href="tel:+79997683299" class="phone-href">+7&nbsp;(999)&nbsp;768&nbsp;32&nbsp;99</a> 
         </p>
         <!-- /.footer__text -->
         <div class="footer__digital-contacts">
-          <img src="img/email-icon.svg" alt="email" class=footer__digital-contacts-img>
-          <img src="img/instagram-icon.svg" alt="instagram" class=footer__digital-contacts-img>
+          <a href="mailto:tasar-ya@yandex.ru" class="digital-contacts-email"></a>
+          <a href="#" class="digital-contacts-inst"></a>
         </div>
       </div>
-      <!-- /.footer-wrap -->
-
+      <!-- /.footer__contacts -->
+      
       <div class="map footer__map" id="map">
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aeaf9b182b203509978b92a9ede3534eea31000b64d49bae199791ae8c4d64889&amp;width=100%25&amp;height=460&amp;lang=ru_RU&amp;scroll=true"></script>
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aeaf9b182b203509978b92a9ede3534eea31000b64d49bae199791ae8c4d64889&amp;width=100%25&amp;lang=ru_RU&amp;scroll=false"></script>
       </div>
       <!-- /.map footer__map -->
 
@@ -459,7 +462,7 @@
           <label for="modal__policy" class="policy__label">я соглашаюсь с обработкой данных</label>
         </div>
         <!-- /.policy -->
-        <button class="button button--primary modal__button">
+        <button class="button button--primary modal__button button--form">
           Отправить заявку
         </button>
       </form>
@@ -474,9 +477,9 @@
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=82309e32-bfc0-4ed6-af23-11eee8e9d283&lang=ru_RU" type="text/javascript">
   </script>
   <script src="js/main.js"></script>
-
+  <!--  -->
 </body>
 </html>
