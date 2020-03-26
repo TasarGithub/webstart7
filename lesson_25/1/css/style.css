@@ -334,9 +334,6 @@ img {
 h1, h2, h3, h4, strong {
   font-weight: 400; }
 
-p {
-  margin: 0; }
-
 .section {
   padding: 60px 0; }
   .section--dark {
@@ -905,6 +902,7 @@ input.invalid {
     line-height: 2rem;
     text-transform: uppercase;
     color: #e3b873;
+    margin: 0;
     margin-bottom: 1.86rem; }
   .footer__digital-contacts {
     margin: 0 auto;
@@ -913,10 +911,14 @@ input.invalid {
     display: flex;
     justify-content: space-between; }
   .footer__map {
-    height: 465px;
+    width: 100%;
     margin: auto;
     max-width: 66.07rem;
     margin-bottom: 4.64rem; }
+
+.map {
+  height: 33.214rem;
+  width: 100%; }
 
 .modal {
   opacity: 0;
@@ -1135,7 +1137,10 @@ input.invalid {
   .digital-contacts-email {
     margin-right: 19px; }
   .policy__label--center {
-    justify-content: start; } }
+    justify-content: start; }
+  .map {
+    height: 255px;
+    width: 100%; } }
 
 @media screen and (max-height: 520px) {
   .hero__scroll-down {

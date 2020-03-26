@@ -82,8 +82,10 @@
       text-align: center
     
 @media screen and ( max-width: 570px )
-  .types__container
-    width: 92%
+  .types__container, .footer__container
+    width: 90.67%
+  // .container
+  //   width: 92%
   .row
     flex-direction: column
     align-items: center
@@ -104,7 +106,8 @@
         display: none
     &-projects__text
       text-align: center
-      
+  .input
+    border-bottom: 1px solid $light// rgba(255, 255, 255, 0.8)   
   .types
     &__card
       margin-bottom: 5rem
@@ -142,12 +145,57 @@
       margin-right: 0
       padding-bottom: 1.55rem
       padding-top: 1.55rem
-      max-width: 28.33rem
       width: 100%
     &__scroll-down
       display: none
   .title
     line-height: 132.83%
+
+  .footer
+    background: $dark
+    padding-bottom: 150px;
+    &__wrap
+      padding: 0
+      background-color: $dark
+    &__form
+      max-width: 100%
+      margin-bottom: 46px
+    &__contacts
+      padding-top: 275px
+    &__digital-contacts
+      max-width: 99px
+      min-height: 39px
+    &__policy
+      margin-bottom: 67px
+
+    &__map
+      // display: none
+      max-height: 255px
+      margin-top: -467px
+    &__input
+      &-group
+        display: flex
+        flex-basis: 100%
+    &__button
+      width: 100%
+    &__menu
+      display: none
+
+  .digital-contacts-email
+    margin-right: 19px
+  .policy
+    &__label--center
+      justify-content: start
+  .map
+    height: 255px
+    width: 100%
+
+// @media screen and ( max-width: 500px )     
+//   .footer
+//     &__map
+//       display: block
+//       // max-height: 255px
+//       height: 255px
 
 @media screen and ( max-height: 520px  )
   .hero
