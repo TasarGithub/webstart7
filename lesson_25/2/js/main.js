@@ -60,7 +60,7 @@ $(document).ready(function () {
 
   //Замена встроенного меторда проверки емейла на лучший , с проверкой точки
   $.validator.methods.email = function( value, element ) {
-    return this.optional( element ) || /[a-z]+@[a-z]+\.[a-z]+/.test( value );
+    return this.optional( element ) || /[A-z0-9._]+@[A-z0-9.-]+\.[a-z]+/.test( value );
   };
 
   $('.modal__form').validate({

@@ -60,7 +60,7 @@ $(document).ready(function () {
 
   //Замена встроенного меторда проверки емейла на лучший , с проверкой точки
   $.validator.methods.email = function( value, element ) {
-    return this.optional( element ) || /[a-z]+@[a-z]+\.[a-z]+/.test( value );
+    return this.optional( element ) || /[A-z0-9._]+@[A-z0-9.-]+\.[a-z]+/.test( value );
   };
 
   $('.modal__form').validate({
@@ -261,90 +261,43 @@ $(document).ready(function () {
     
 
 
-  // var ym = ymaps.ready(function () {
-  //     var myMap = new ymaps.Map('map', {
-  //             center: [55.743676, 37.592230],
-  //             zoom: 15
-  //         }, {
-  //             searchControlProvider: 'yandex#search'
-  //         }),
+    ymaps.ready(function () {
+      var myMap = new ymaps.Map('map', {
+              center: [55.743676, 37.592230],
+              zoom: 15
+          }, {
+              searchControlProvider: 'yandex#search'
+          }),
 
-  //         // Создаём макет содержимого.
-  //         MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-  //             '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-  //         ),
+          // Создаём макет содержимого.
+          MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+              '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+          ),
 
-  //         myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-  //             hintContent: 'Офис Design repair LTD',
-  //             balloonContent: 'Парковка во дворе'
-  //         }, {
-  //             // Опции.
-  //             autoFitToViewport: 'ifNull',
-  //             searchControlProvider: 'yandex#search',
-  //             // Необходимо указать данный тип макета.
-  //             iconLayout: 'default#image',
-  //             // Своё изображение иконки метки.
-  //             iconImageHref: 'img/location.png',
-  //             // Размеры метки.
-  //             iconImageSize: [32, 32],
-  //             // Смещение левого верхнего угла иконки относительно
-  //             // её "ножки" (точки привязки).
-  //             iconImageOffset: [-5, -38]
-  //         });
-  //         myMap.behaviors.disable('scrollZoom');
-  //     // myMap.container.fitToViewport();
+          myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+              hintContent: 'Офис Design repair LTD',
+              balloonContent: 'Парковка во дворе'
+          }, {
+              // Опции.
+              // autoFitToViewport: 'ifNull',
+              // searchControlProvider: 'yandex#search',
+              // Необходимо указать данный тип макета.
+              iconLayout: 'default#image',
+              // Своё изображение иконки метки.
+              iconImageHref: 'img/location.png',
+              // Размеры метки.
+              iconImageSize: [32, 32],
+              // Смещение левого верхнего угла иконки относительно
+              // её "ножки" (точки привязки).
+              iconImageOffset: [-5, -38]
+          });
+          myMap.behaviors.disable('scrollZoom');
+      // myMap.container.fitToViewport();
 
-  //     myMap.geoObjects
-  //         .add(myPlacemark);
+      myMap.geoObjects
+          .add(myPlacemark);
       
-  // });
-
-
-
-
-  // $(window).resize(function() {
-  //    if ($(window).width() === 570) {
-  //     ymaps.ready(function () {
-  //       var myMap = new ymaps.Map('map', {
-  //               center: [55.743676, 37.592230],
-  //               zoom: 15
-  //           }, {
-  //               searchControlProvider: 'yandex#search'
-  //           }),
-  
-  //           // Создаём макет содержимого.
-  //           MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-  //               '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-  //           ),
-  
-  //           myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-  //               hintContent: 'Офис Design repair LTD',
-  //               balloonContent: 'Парковка во дворе'
-  //           }, {
-  //               // Опции.
-  //               // Необходимо указать данный тип макета.
-  //               iconLayout: 'default#image',
-  //               // Своё изображение иконки метки.
-  //               iconImageHref: 'img/location.png',
-  //               // Размеры метки.
-  //               iconImageSize: [32, 32],
-  //               // Смещение левого верхнего угла иконки относительно
-  //               // её "ножки" (точки привязки).
-  //               iconImageOffset: [-5, -38]
-  //           });
-  //           myMap.behaviors.disable('scrollZoom');
-       
-  //       myMap.geoObjects
-  //           .add(myPlacemark);
-  //           myMap.container.fitToViewport(); 
-  //           console.log(myMap);
-  //   });
-  //    console.log($(window).width());
-  //    console.log($(".ymaps-2-1-76-map"));
-  //    console.log($("#map"));
-  //   // $(".ymaps-2-1-76-map").container.fitToViewport();
-  //   }
-  // });
+  });
 
 
 });
