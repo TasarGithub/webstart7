@@ -18,6 +18,11 @@ $(document).ready(function () {
 
   var modal =$('.modal'),
   modalThanks =$('.modal-thanks'),
+  formModal =$('.modal__form'),
+  formControl =$('.control__form'),
+  formFooter =$('.footer__form'),
+  btnControl =$('.control__button'),
+  btnFooter =$('.footer__button'),
   modalBtn = $('[data-toggle="modal"]'),
   closeBtnThanks = $('.modal-thanks__close'),
   closeBtn = $('.modal__close');
@@ -184,6 +189,10 @@ $(document).ready(function () {
         data: $(form).serialize(),
         success: function (response) {
           console.log('Ajax сработал. Ответ сервера: ' + response);
+          modalThanks.toggleClass('modal-thanks--visible');
+          $('form')[0].reset();
+          // modal.toggleClass('modal--visible');
+          // modal.removeClass('modal--visible');
         }
       });
     }
@@ -234,6 +243,10 @@ $(document).ready(function () {
           data: $(form).serialize(),
           success: function (response) {
             console.log('Ajax сработал. Ответ сервера: ' + response);
+            modalThanks.toggleClass('modal-thanks--visible');
+            $('form')[1].reset();
+            // modal.toggleClass('modal--visible');
+            // modal.removeClass('modal--visible');
           }
         });
       }

@@ -845,11 +845,11 @@ input.invalid {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
   padding-top: 3rem; }
   .footer__wrap {
-    background-color: #181818;
-    max-width: 63.07rem;
+    max-width: 100%;
     margin: auto;
     margin-bottom: 3.714rem;
-    padding: 2.5rem; }
+    padding: 2.5rem;
+    background: #131313 url("../img/footer-bg-lines.svg") no-repeat center/cover; }
   .footer__title {
     margin-top: 0;
     text-transform: uppercase;
