@@ -132,17 +132,17 @@ $(document).ready(function () {
     errorElement: "div",
     rules: {
       // строчное правило simple rule, converted to {required:true}
-      userName: {
+      userNameControl: {
         required: true,
         minlength: 2,
         maxlength: 15
       },
-      userPhone: {
+      userPhoneControl: {
         required: true,
         minlength: 17
       },
       //правило - объект
-      userEmail: {
+      userEmailControl: {
         required: true,
         email: true
       },
@@ -152,16 +152,16 @@ $(document).ready(function () {
     },
     //сообщения
     messages: {
-      userName: {
+      userNameControl: {
         required: "Заполните поле",
         minlength: "Имя не короче двух букв",
         maxlength: "Имя не длинее 15ти букв"
       },
-      userPhone: {
+      userPhoneControl: {
         required: "Заполните поле",
         minlength: "Введите корректный телефон",
       },      
-      userEmail: {
+      userEmailControl: {
         required: "Заполните поле",
         email: "Введите корректный email"
       },
@@ -189,39 +189,31 @@ $(document).ready(function () {
       errorElement: "div",
       rules: {
         // строчное правило simple rule, converted to {required:true}
-        userName: {
+        userNameFooter: {
           required: true,
           minlength: 2,
           maxlength: 15
         },
-        userPhone: {
+        userPhoneFooter: {
           required: true,
           minlength: 17
         },
         //правило - объект
-        userEmail: {
-          required: true,
-          email: true
-        },
         footerPolicyCheckbox: {
           required: true
         }
       },
       //сообщения
       messages: {
-        userName: {
+        userNameFooter: {
           required: "Заполните поле",
           minlength: "Имя не короче двух букв",
           maxlength: "Имя не длинее 15ти букв"
         },
-        userPhone: {
+        userPhoneFooter: {
           required: "Заполните поле",
           minlength: "Введите корректный телефон",
         },      
-        userEmail: {
-          required: "Заполните поле",
-          email: "Введите корректный email"
-        },
         footerPolicyCheckbox: {
           required: "Заполните поле"
         }

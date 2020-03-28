@@ -944,6 +944,11 @@ input.invalid {
     background: #131313 url("../img/bg-lines.svg") no-repeat center;
     padding: 2.357rem 3.5rem 1.928rem;
     color: #fff; }
+  .modal__text {
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.357rem;
+    text-align: center;
+    color: #e3b873; }
   .modal__close {
     position: absolute;
     right: 0;
