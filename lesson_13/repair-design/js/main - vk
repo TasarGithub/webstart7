@@ -200,6 +200,10 @@ $(document).ready(function () {
           $('#glo_vksubscribe').css('width', '220px');
           
                //$(".modal__dialog").append("<div id=\"vk_subscribe\"></div><script type=\"text/javascript\">VK.Widgets.Subscribe(\"vk_subscribe\", {}, -123083697);</script>");
+
+
+
+
         },
         erorr: function(responce) {
           console.error('Ошибка запроса' + responce);

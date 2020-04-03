@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 18px; }
+
+body {
+  font-family: Tahoma; }
+
+h1, h2, p {
+  margin: 0; }
+
+.section--card {
+  background-color: #ffffff; }
+
+.section--delivery-pay {
+  background-color: #f2f2f2;
+  max-width: 1366px;
+  margin: auto; }
+
+.container {
+  max-width: 1140px;
+  margin: auto; }
+
+.button {
+  border: 2.0px solid #f05a22;
+  border-radius: 5.0px;
+  font-family: Tahoma;
+  font-size: 24px;
+  line-height: 27px;
+  font-weight: 700; }
+  .button__description-succes {
+    padding: 18px 41px;
+    color: #ffffff;
+    background-color: #f05a22;
+    margin-right: 35px; }
+  .button__description-detials {
+    padding: 18px 27px;
+    color: #f05a22;
+    background-color: #ffffff; }
+
+.card {
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 77px;
+  padding-bottom: 93px;
+  width: 100%; }
+  .card__img-book {
+    flex-base: 42%;
+    max-width: 22rem;
+    max-height: 630rem; }
+  .card__description {
+    flex-base: 58%;
+    margin-top: 48px; }
+  .card__title {
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #000000;
+    margin-left: -3px; }
+  .card__subtitle {
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #000000;
+    margin: 0;
+    margin-top: 6px; }
+  .card__text {
+    margin-top: 30px;
+    font-size: 1rem;
+    line-height: 27px;
+    font-weight: 400;
+    color: #000000;
+    max-width: 526px;
+    margin-left: 2px; }
+  .card__price {
+    margin-top: 48px;
+    margin-bottom: 68px;
+    margin-left: -1px;
+    display: block;
+    font-size: 48px;
+    line-height: 27px;
+    font-weight: 400;
+    color: #313131; }
+
+.delivery-pay {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  background-color: #f2f2f2;
+  min-height: 408px;
+  width: 100%; }
+  .delivery-pay__title {
+    flex-basis: 204px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Tahoma;
+    font-size: 30px;
+    line-height: 27px;
+    font-weight: 700;
+    color: #333333;
+    margin: 0; }
+  .delivery-pay__cards {
+    width: 100%;
+    min-height: 204px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap; }
+  .delivery-pay__item {
+    height: 100%;
+    flex-basis: 25%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap; }
+  .delivery-pay__images {
+    min-height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap; }
+  .delivery-pay__img {
+    max-width: 100%; }
+  .delivery-pay__name {
+    font-family: Arial;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #333333;
+    text-align: center; }
