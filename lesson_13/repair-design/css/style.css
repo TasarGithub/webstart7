@@ -353,15 +353,31 @@ h1, h2, h3, h4, strong {
       line-height: 138%; }
       .section-title__heading--primary {
         color: #e3b873; }
+    .section-title-projects__heading {
+      margin-bottom: 1.6rem;
+      font-family: Yeseva One;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 27px;
+      line-height: 37px;
+      letter-spacing: -0.065em; }
+    .section-title-projects__text {
+      margin: 0;
+      font-family: FuturaBookC;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 29px;
+      margin-bottom: 2.2rem; }
     .section-title__word {
       display: flex;
       align-items: center; }
       .section-title__word::after {
         content: '';
-        width: 90px;
+        width: 92px;
         height: 2px;
         background-color: #e3b873;
-        margin-left: 2rem; }
+        margin-left: 2.4rem; }
     .section-title__text {
       font-size: 1.28rem;
       line-height: 2.07rem;
@@ -380,7 +396,7 @@ h1, h2, h3, h4, strong {
 .container {
   width: 85%;
   max-width: 1256px;
-  margin: auto; }
+  margin: 0 auto; }
 
 .row {
   display: flex;
@@ -403,7 +419,7 @@ h1, h2, h3, h4, strong {
   max-width: 48.57rem; }
 
 .button {
-  padding: 0.93rem 1.43rem;
+  padding: 11px 24px;
   border: none;
   border-radius: 2px;
   text-transform: uppercase;
@@ -526,6 +542,7 @@ input.invalid {
 
 .logo {
   color: #e3b873;
+  font-size: 1.107rem;
   text-transform: uppercase;
   text-decoration: none;
   margin-right: 2.857rem; }
@@ -534,7 +551,7 @@ input.invalid {
   text-decoration: none;
   color: #fff;
   text-transform: uppercase;
-  margin-right: 2.857rem;
+  margin-right: 2.7rem;
   transition: color 0.2s; }
   .nav__item:hover {
     color: #e3b873; }
@@ -589,6 +606,11 @@ input.invalid {
     min-height: 6.92rem;
     text-decoration: none;
     text-transform: uppercase;
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 138.6%;
     color: #fff;
     background-color: #131313; }
     .hero__scroll-down::after {
@@ -599,7 +621,7 @@ input.invalid {
       border: 2px solid #e3b873;
       border-radius: 50%;
       background-color: #131313;
-      margin-left: 12px; }
+      margin-left: 18px; }
   .hero__go-back {
     position: relative;
     display: flex;
@@ -628,15 +650,23 @@ input.invalid {
     margin-left: 4.285rem; }
   .hero__text {
     font-size: 1.57rem;
-    max-width: 35.71rem; }
-  .hero__button {
-    margin-right: 1.43rem; }
+    max-width: 35.71rem;
+    margin: 0;
+    margin-top: 1.26rem;
+    line-height: 138%;
+    margin-bottom: 45px; }
+  .hero__button-primary {
+    margin-right: 1.43rem;
+    padding: 18px 32px; }
+  .hero__button-outline {
+    padding: 18px 46px; }
 
 .instagram {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #131313; }
+  background-color: #131313;
+  min-width: 91.50px; }
   .instagram__link {
     display: flex;
     align-items: center;
@@ -644,41 +674,46 @@ input.invalid {
     text-transform: uppercase;
     color: #e3b873;
     transform: rotate(90deg);
-    line-height: 0.7; }
+    line-height: 0.7;
+    font-size: 1.1rem; }
     .instagram__link::after {
       content: '';
-      width: 50px;
+      width: 52px;
       height: 1px;
       background-color: #e3b873;
-      margin-left: 8px; }
+      margin-left: 14px; }
+  .instagram__container {
+    margin: 0 auto; }
 
 .title {
   margin: 0;
   font-family: 'Yeseva One', cursive;
   text-transform: uppercase;
   font-size: 2.857rem;
-  font-weight: 400; }
+  font-weight: 400;
+  line-height: 135%; }
   .title--primary {
     color: #e3b873; }
 
 .projects {
   padding-bottom: 30rem; }
+  .projects__col-60 {
+    margin-left: -30px; }
 
 .swiper-slide {
   display: flex;
   flex-wrap: wrap;
   padding-left: 2px; }
   .swiper-slide__text {
-    flex-basis: 50%;
-    margin-bottom: 2.42rem;
-    padding-bottom: 2rem; }
+    flex-basis: 43%;
+    margin-bottom: 1.2rem; }
   .swiper-slide__heading {
     font-size: 1.285rem;
     line-height: 1.78rem;
     font-family: 'Yeseva One', cursive;
     color: #e3b873;
     text-transform: uppercase;
-    margin-bottom: 0.64rem; }
+    margin-bottom: 0.5rem; }
   .swiper-slide__value {
     display: block;
     font-size: 1.07rem;
