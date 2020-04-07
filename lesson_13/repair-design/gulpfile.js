@@ -34,6 +34,15 @@ function bs() {
 }
 
 
+function minifyCss() {
+  return src('css/*.+(css|!min.css)')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(dest('dist/'));
+}
+
 // gulp.task('minify-css', () => {
 //   return gulp.src('css/*.+(css|!min.css)')
 //     .pipe(cleanCSS({compatibility: 'ie8'}))
@@ -46,3 +55,4 @@ function bs() {
 
 
 exports.serve = bs;
+exports.mini = minifyCss;
