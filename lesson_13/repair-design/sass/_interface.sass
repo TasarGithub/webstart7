@@ -23,7 +23,7 @@
     color: $light
     // padding: 10px 20px
   &--form
-    min-width: 213px
+    // min-width: 213px
     max-height: 51px
 .label
   font-size: 1.07rem
@@ -64,6 +64,7 @@
       margin-right: 0.64rem
     &--center
       justify-content: center
+  
 label
   &.invalid
     color: tomato
@@ -72,19 +73,28 @@ label
 input
   &.invalid
     border-bottom: 1px solid tomato
-    
-#modalPolicyCheckbox-error
+
+div[class$='input-group']
+  position: relative
+
+div[id$='-error']
   position: absolute
+  right: 0
+  top: 0
+
+#modalPolicyCheckbox-error
   left: 7%
   bottom: -1.3rem
+  top: auto
 #footerPolicyCheckbox-error
-  position: absolute
+  // position: absolute
   left: 30%
+  top: auto
   bottom: -1.3rem
 
 #controlPolicyCheckbox-error
-  position: absolute
   left: 36.5%
+  top: auto
   bottom: -1.3rem
 
 

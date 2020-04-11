@@ -1,7 +1,9 @@
 .projects
   padding-bottom: 30rem
+  //background: $dark url('../img/big-bg-lines.svg') no-repeat center
   &__col-60
-    margin-left: -30px
+    margin-top: 2px
+    margin-right: 19px
 .swiper
   &-slide
     display: flex
@@ -37,6 +39,8 @@
 
   &__nav
     // position: relative
+    margin-top: 97px
+    // margin-left: 5px
     display: flex
     justify-content: flex-start 
     align-items: center
@@ -44,19 +48,29 @@
     // magin: 0 auto
     // margin-left: 30%
   &-pagination
-    bottom: 0
-    position: static
+
+    bottom: 12px
+    // position: static
     //перекрывается стилем, поэтому берем стиль от swiper
     // &-bullets
     //   width: auto 
     &-bullet
-      margin-right: 10px 
-      background-color: rgba($light, 0.3)
+      // margin-right: 10px 
+      width: 10px
+      height: 10px
+      margin: 0 9px 0 9px
+      background-color: rgba($light, 0.9)
+      // &:first-child
+      //   margin-left: 19px
+      // &:last-child
+      //   margin-right: 10px
+        
       &-active
         background-color: $light
   &-button
     &-prev,&-next
-      position: static
+      // position: static
+      // left: 5px
       bottom: 0
       top: auto
       margin-top: 0
@@ -66,17 +80,17 @@
       &::after
         display: none
     &-prev
-      margin-right: 29.5px
-      left: 0
+      // margin-right: 29.5px
+      left: 3px
       background: url('../img/arrow-prev.svg') no-repeat center
     &-next
-      margin-left: 29.5px
+      // margin-left: 29.5px
       // left: 50%
       background: url('../img/arrow-next.svg') no-repeat center
 
 .swiper-container-horizontal>.swiper-pagination-bullets
   width: auto
-  bottom: 12px
+  bottom: 0px
   
   // &-pagination 
   // &-button-prev 
