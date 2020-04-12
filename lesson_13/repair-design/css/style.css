@@ -446,7 +446,10 @@ h1, h2, h3, h4, strong {
     max-height: 51px; }
 
 .label {
-  font-size: 1.07rem; }
+  padding: 0;
+  margin: 0;
+  font-size: 1.07rem;
+  color: #959595; }
   .label--light {
     color: rgba(255, 255, 255, 0.5); }
 
@@ -824,12 +827,13 @@ div[id$='-error'] {
 .control__input {
   color: #131313; }
   .control__input-group {
+    margin-top: 1px;
     display: flex;
     flex-direction: column;
     flex-basis: 30%; }
 
 .control__button {
-  padding: 1.2857rem 4.785rem;
+  padding: 1.2857rem 4.2rem;
   font-family: Futura Book;
   font-style: normal;
   font-weight: 500;
@@ -838,7 +842,7 @@ div[id$='-error'] {
   letter-spacing: 0.5px; }
 
 .control__label {
-  margin-bottom: -7px;
+  margin-bottom: -6px;
   justify-content: center; }
 
 .control__policy {
@@ -846,7 +850,8 @@ div[id$='-error'] {
   margin: 0 auto;
   margin-top: 1.1rem; }
   .control__policy-label {
-    justify-content: center; }
+    justify-content: center;
+    margin-right: 64px; }
 
 .control__thanks-block {
   display: none;
@@ -859,6 +864,7 @@ div[id$='-error'] {
   margin: auto; }
 
 .types__title {
+  margin-top: 2.2rem;
   margin-bottom: 2rem; }
 
 .card {
@@ -1044,10 +1050,6 @@ div[id$='-error'] {
   .modal__thanks-block, .modal-thanks__thanks-block {
     display: none;
     width: 100%; }
-
-.label {
-  padding: 0;
-  margin: 0; }
 
 @media screen and (max-width: 1350px) {
   .nav__item {
