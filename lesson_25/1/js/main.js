@@ -261,7 +261,7 @@ $(document).ready(function () {
     
 
 
-    ymaps.ready(function () {
+/*      ymaps.ready(function () {
       var myMap = new ymaps.Map('map', {
               center: [55.743676, 37.592230],
               zoom: 15
@@ -298,6 +298,6 @@ $(document).ready(function () {
           .add(myPlacemark);
       
   });
-
+  */
 
 });
