@@ -51,16 +51,20 @@
       margin-bottom: 5rem
 
 @media screen and ( max-width: 680px  ) 
-  .projects__row
-    flex-direction: column
-    align-items: center
-  .projects__col-40
-    width: 100%
-    flex-basis: 45%
+  .projects
+    padding: 3rem 0 3rem 0
+    &__title
 
-  .projects__col-60
-    width: 100%
-    flex-basis: 45%
+    &__row
+      flex-direction: column
+      align-items: center
+    &__col-40
+      width: 100%
+      flex-basis: 45%
+    &__col-60
+      width: 100%
+      flex-basis: 45%
+
   .swiper-slide-projects__col-60
     overflow: auto
     height: 100%
@@ -73,42 +77,60 @@
 
   .section-title
     &-projects__heading
-      text-align: center
+      text-align: left
     &__word
-      justify-content: center
+      justify-content: left
       &::after
         display: none
     &-projects__text
-      text-align: center
+      text-align: left
     
 @media screen and ( max-width: 570px )
-  .types__container, .footer__container
+  .section
+    &__control
+      margin-top: 0
+  .bg-lines
+    margin: 0
+    padding: 0
+    &>img
+      display: none
+    &__white
+      margin-top: -100px
+      // &>img
+      //   display: none
+
+  .types__container, .footer__container, .control__container
     width: 90.67%
   // .container
   //   width: 92%
+  .title
+    line-height: 132.83%
   .row
     flex-direction: column
     align-items: center
-  .projects__col-40
-    width: 100%
-    flex-basis: 45%
+  .projects__col
+    &-40
+      width: 100%
+      flex-basis: 45%
+    &-60
+      width: 100%
+      flex-basis: 45%
 
-  .projects__col-60
-    width: 100%
-    flex-basis: 45%
-
-  .section-title
-    &-projects__heading
-      text-align: center
-    &__word
-      justify-content: center
-      &::after
-        display: none
-    &-projects__text
-      text-align: center
+  // .section-title
+  //   &-projects__heading
+  //     text-align: center
+  //   &__word
+  //     justify-content: center
+  //     &::after
+  //       display: none
+  //   &-projects__text
+  //     text-align: center
   .input
     border-bottom: 1px solid $light// rgba(255, 255, 255, 0.8)   
   .types
+    padding-top: 83px
+    padding-bottom: 1rem
+    background-color: black
     &__card
       margin-bottom: 5rem
   .card
@@ -148,13 +170,43 @@
       width: 100%
     &__scroll-down
       display: none
-  .title
-    line-height: 132.83%
+  .control
+    background-color: $dark
+    color: $light
+    line-height: 169.8%
+    &__section-title
+      margin-top: 0
+      padding-top: 51px
+    &__form
+      position: relative
+      justify-content: space-between
+      flex-direction: column
+      height: 290px
+    &__input-group
+      // height: 30% 
+      // background-color: white
+      // flex-basis: 20%
+      &:nth-child(2)
+        margin-top: -60px
+        
+
+    &__policy
+      position: absolute
+      bottom: 90px
+      flex-basis: 100%
+      margin: 0 auto 0 0
+    &__policy-label 
+      // justify-content: flex-start
+      // margin-right: 4px
+    &__button
+      margin-bottom: -1.5rem
+      
 
   .footer
     background: $dark
     padding-bottom: 150px;
     &__wrap
+      margin-top: 0
       padding: 0
       background-color: $dark
     &__form
