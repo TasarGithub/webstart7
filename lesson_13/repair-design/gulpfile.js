@@ -12,9 +12,9 @@ function servSass() {
   return src("./sass/**/*.sass", "./sass/**/*.scss")
       .pipe(wait(400))
       .pipe(sass())
-      .pipe(autoprefixer({
-        cascade: false
-      }))
+      // .pipe(autoprefixer({
+      //   cascade: false
+      // }))
       .pipe(dest("./css"))
       .pipe(browserSync.stream());
 }

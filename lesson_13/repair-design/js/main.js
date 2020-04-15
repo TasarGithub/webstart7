@@ -508,4 +508,30 @@ $(document).ready(function () {
     $("body,html").animate({"scrollTop":0},scrollTime);
     });
 
+
+    const mySwiperSix = new Swiper('swiper-container-six', {
+      loop: true,
+      pagination: {
+         el: '.swiper-pagination',
+         type: 'bullets',
+         clickable: true,
+      },
+   
+      navigation: {
+         nextEl: '.swiper-button-next',
+         prevEl: '.swiper-button-prev',
+      }
+
+  });
+
+
+  $('.swiper-menu').on('click', '.swiper-menu__item', function() {
+    const index = $(this).data('index');
+    console.log('index: ', index);
+    mySwiperSix.slideTo(index);
+ });
+ 
+
+
+
 });
