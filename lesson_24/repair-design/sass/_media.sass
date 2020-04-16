@@ -32,6 +32,17 @@
        margin-top: -4.3rem
     &__pricetag
       font-size: 1rem
+  .six-step
+    &__swiper-nav
+      margin-top: 0
+    &__swiper-menu-item
+      flex-basis: 30%
+      &:nth-child(1),&:nth-child(4)
+        flex-basis: 35%
+      &:nth-child(3),&:nth-child(6)
+        // margin-right: -30px
+        flex-basis: 20%
+
   // .hero
   //   &__instagram
   //     display: none
@@ -51,16 +62,20 @@
       margin-bottom: 5rem
 
 @media screen and ( max-width: 680px  ) 
-  .projects__row
-    flex-direction: column
-    align-items: center
-  .projects__col-40
-    width: 100%
-    flex-basis: 45%
+  .projects
+    padding: 3rem 0 3rem 0
+    &__title
 
-  .projects__col-60
-    width: 100%
-    flex-basis: 45%
+    &__row
+      flex-direction: column
+      align-items: center
+    &__col-40
+      width: 100%
+      flex-basis: 45%
+    &__col-60
+      width: 100%
+      flex-basis: 45%
+
   .swiper-slide-projects__col-60
     overflow: auto
     height: 100%
@@ -73,39 +88,62 @@
 
   .section-title
     &-projects__heading
-      text-align: center
+      text-align: left
     &__word
-      justify-content: center
+      justify-content: left
       &::after
         display: none
     &-projects__text
-      text-align: center
+      text-align: left
     
 @media screen and ( max-width: 570px )
-  .types__container
-    width: 92%
+  .section
+    &__control
+      margin-top: 0
+    &__six-step
+      display: none
+  .bg-lines
+    margin: 0
+    padding: 0
+    &>img
+      display: none
+    &__white
+      //margin-top: -100px
+      // &>img
+      //   display: none
+
+  .types__container, .footer__container, .control__container, .hero__container
+    width: 90.67%
+  // .container
+  //   width: 92%
+  .title
+    line-height: 132.83%
   .row
     flex-direction: column
     align-items: center
-  .projects__col-40
-    width: 100%
-    flex-basis: 45%
+  .projects__col
+    &-40
+      width: 100%
+      flex-basis: 45%
+    &-60
+      width: 100%
+      flex-basis: 45%
 
-  .projects__col-60
-    width: 100%
-    flex-basis: 45%
-
-  .section-title
-    &-projects__heading
-      text-align: center
-    &__word
-      justify-content: center
-      &::after
-        display: none
-    &-projects__text
-      text-align: center
-      
+  // .section-title
+  //   &-projects__heading
+  //     text-align: center
+  //   &__word
+  //     justify-content: center
+  //     &::after
+  //       display: none
+  //   &-projects__text
+  //     text-align: center
+  .input
+    border-bottom: 1px solid $light// rgba(255, 255, 255, 0.8)   
   .types
+    // padding-top: 83px
+    padding-bottom: 1rem
+    // background-color: black
     &__card
       margin-bottom: 5rem
   .card
@@ -126,8 +164,11 @@
       color: $light 
     &__button
       display: none
+
   .hero
-    padding-top: 9rem
+    height: auto
+    padding-top: 148px
+    padding-bottom: 61px
     &__content
       max-width: 28.33rem
       margin-left: 0
@@ -136,18 +177,103 @@
       margin-top: 1.08rem
       margin-bottom: 2.75rem
       line-height: 135.84%
-    &__button
-      display: block
-      margin-bottom: 2.2rem
-      margin-right: 0
-      padding-bottom: 1.55rem
-      padding-top: 1.55rem
-      max-width: 28.33rem
-      width: 100%
+    // &__button
+    //   display: block
+    //   margin-bottom: 2.2rem
+    //   margin-right: 0
+    //   padding-bottom: 1.55rem
+    //   padding-top: 1.55rem
+    //   width: 100%
     &__scroll-down
       display: none
-  .title
-    line-height: 132.83%
+    &__button-primary
+      width: 100%
+      margin-right: 0
+    &__button-outline
+      margin-top: 26px
+      width: 100%
+  .control
+    background-color: $dark
+    color: $light
+    line-height: 169.8%
+    &__section-title
+      margin-top: 0
+      padding-top: 51px
+    &__video
+      max-width: 340px
+      min-height: 207px
+    &__form
+      position: relative
+      justify-content: space-between
+      flex-direction: column
+      height: 290px
+    &__input-group
+      // height: 30% 
+      // background-color: white
+      // flex-basis: 20%
+      &:nth-child(2)
+        margin-top: -60px
+        
+
+    &__policy
+      position: absolute
+      bottom: 90px
+      flex-basis: 100%
+      margin: 0 auto 0 0
+    &__policy-label 
+      // justify-content: flex-start
+      // margin-right: 4px
+    &__button
+      margin-bottom: -1.5rem
+
+  .video__play
+    max-width: 65px
+
+  .footer
+    background: $dark
+    padding-bottom: 150px;
+    &__wrap
+      margin-top: 0
+      padding: 0
+      background-color: $dark
+    &__form
+      max-width: 100%
+      margin-bottom: 46px
+    &__contacts
+      padding-top: 275px
+    &__digital-contacts
+      max-width: 99px
+      min-height: 39px
+    &__policy
+      margin-bottom: 67px
+    &__map
+      // display: none
+      max-height: 255px
+      margin-top: -467px
+    &__input
+      &-group
+        display: flex
+        flex-basis: 100%
+    &__button
+      width: 100%
+    &__menu
+      display: none
+
+  .digital-contacts-email
+    margin-right: 19px
+  .policy
+    &__label--center
+      justify-content: start
+  .map
+    height: 255px
+    width: 100%
+
+// @media screen and ( max-width: 500px )     
+//   .footer
+//     &__map
+//       display: block
+//       // max-height: 255px
+//       height: 255px
 
 @media screen and ( max-height: 520px  )
   .hero
