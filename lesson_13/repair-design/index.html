@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="//api-maps.yandex.ru">
+	<link rel="dns-prefetch" href="//api-maps.yandex.ru">
   <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/animate.css">
-  <script src="https://vk.com/js/api/openapi.js?167" type="text/javascript"></script>
+  <script src="https://vk.com/js/api/openapi.js?167"></script>
   <title>Repair Design Project</title>
 </head>
 <body>
@@ -35,7 +37,7 @@
   <!-- /.header -->
   <div class="main">
     <div class="bg-lines">
-      <img src="./img/bg-lines-hero-projects.svg" alt="">
+      <img src="./img/bg-lines-hero-projects.svg" class="lazyload" alt="">
       <section class="hero">
         <div class="instagram hero__instagram">
           <a href="#" class="instagram__link">Instagram</a>
@@ -175,7 +177,7 @@
                 <div class="swiper-wrapper swiper-no-swiping">
                     <!-- Slides -->
                     <div class="swiper-slide swiper-slide-projects__col-60">
-                      <img src="img/projects/project-1.jpg" alt="">
+                      <img src="img/projects/project-1.jpg" class="lazyload" alt="">
                     </div>
                     <div class="swiper-slide swiper-slide-projects__col-60">
                       <img src="img/projects/project-2.jpg" alt="">
@@ -719,9 +721,64 @@
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=82309e32-bfc0-4ed6-af23-11eee8e9d283&lang=ru_RU" type="text/javascript">
+<!-- 
+  <script async src="https://api-maps.yandex.ru/2.1/?apikey=82309e32-bfc0-4ed6-af23-11eee8e9d283&lang=ru_RU" type="text/javascript"></script> -->
+
+  <script> 
+  
+    setTimeout(function(){
+      var elem = document.createElement('script');
+      elem.type = 'text/javascript';
+      elem.src ='//api-maps.yandex.ru/2.1/?apikey=82309e32-bfc0-4ed6-af23-11eee8e9d283&lang=ru_RU&onload=getYaMap';
+      document.getElementsByTagName('body')[0].appendChild(elem);
+    }, 2000);
+
+    function getYaMap(){
+        var myMap = new ymaps.Map('map', {
+                center: [55.743676, 37.592230],
+                zoom: 15
+            }, {
+                searchControlProvider: 'yandex#search'
+            }),
+
+            // Создаём макет содержимого.
+            MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+            ),
+
+            myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                hintContent: 'Офис Design repair LTD',
+                balloonContent: 'Парковка во дворе'
+            }, {
+                // Опции.
+                // autoFitToViewport: 'ifNull',
+                // searchControlProvider: 'yandex#search',
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#image',
+                // Своё изображение иконки метки.
+                iconImageHref: 'img/location.png',
+                // Размеры метки.
+                iconImageSize: [32, 32],
+                // Смещение левого верхнего угла иконки относительно
+                // её "ножки" (точки привязки).
+                iconImageOffset: [-5, -38]
+            });
+            myMap.behaviors.disable('scrollZoom');
+        // myMap.container.fitToViewport();
+
+        myMap.geoObjects
+            .add(myPlacemark);
+        
+    }
+
+  
   </script>
+
+
+
   <script src="js/main.js"></script>
+
   <!--  -->
+  <!-- <script src="lazysizes.min.js"></script> -->
 </body>
 </html>
