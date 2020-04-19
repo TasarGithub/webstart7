@@ -28,54 +28,32 @@ $(document).ready(function () {
   closeBtn = $('.modal__close');
 
 
-  const modalAll = document.querySelectorAll('[data-close="modal"]'),
+  var modalAll = document.querySelectorAll('[data-close="modal"]'),
     modaljs = document.querySelector('.modal');
 
-  console.log('modaljs: ', modaljs);
+  //console.log('modaljs: ', modaljs);
+
+  //Close modal windows
+  $('[data-close="modal"]').each(function(index, item){
+    console.log('item: ', item);
+
+    item.click(function(event) {
+      var target = event.target;
   
-  modalAll.forEach((item) => {
-    // item.addEventListener('keydown', function(event) {
-    
-    //   if (event.code === 'Escape' && (item.classList.contains("modal--visible"))) {
-    //     item.classList.remove("modal--visible");
-    //   }
-    // });
-    item.addEventListener('click', function(event) {
-      const target = event.target;
-  
-      console.log('target', target); //, modalBtn);
-          if (target.classList.contains("modal--visible")) {
-              target.classList.remove("modal--visible");
+      console.log('target', target); 
+     
+          if  (target.hasClass("modal--visible")) {
+              target.removeClass("modal--visible");
           }
     });
-
-    document.addEventListener('keydown', function(event) {
-      // console.log('event.code: ', event.code);
-      // console.log('modaljs.classList.contains("modal--visible"): ', modaljs.classList.contains("modal--visible"));
-      // const target = event.target;
-      if (event.code === 'Escape' && (item.classList.contains("modal--visible"))) {
-        item.classList.remove("modal--visible");
+    $(document).keydown(function(event) {
+      if (event.code === 'Escape' && (item.hasClass("modal--visible"))) {
+        item.removeClass("modal--visible");
       }
     });
 
   });
-  // document.addEventListener('keydown', function(event) {
-  //   console.log('event.code: ', event.code);
-  //   console.log('modaljs.classList.contains("modal--visible"): ', modaljs.classList.contains("modal--visible"));
-  //   // const target = event.target;
-  //   if (event.code === 'Escape' && (modaljs.classList.contains("modal--visible"))) {
-  //     modaljs.classList.remove("modal--visible");
-  //   }
-  // });
 
-  // document.addEventListener('click', function(event) {
-  //   const target = event.target;
-
-  //   console.log('target', target); //, modalBtn);
-  //       if (target.classList.contains("modal--visible")) {
-  //           target.classList.remove("modal--visible");
-  //       }
-  // });
 
   modalBtn.on('click', function () {
     if ($('div').is('#glo_vksubscribe')) {
@@ -101,41 +79,8 @@ $(document).ready(function () {
 
 
 
-
-
-
-
-
-
   let flyInterval,
     count = 1;
-
-    // let flyAnimate = () => {
-    //   flyInterval = requestAnimationFrame(flyAnimate);
-    //   count=count - 0.01;
-
-    //   if ($('.control__thanks').style.opacity < 1) {
-    //         $('.control__thanks').style.opacity = count; 
-    //       } else {
-    //         $('.control__thanks').style.display = "none";
-    //         $('.control__form').style.display = "flex";
-    //         cancelAnimationFrame(flyInterval);
-    //       }
-    // }; 
- 
-// function flyAnimate() {
-//   $("<div />").appendTo("body");
-//   globalID = requestAnimationFrame(repeatOften);
-
-//   flyInterval = requestAnimationFrame(flyAnimate);
-//   count=count + 0.01;
-
-// }
-
-//   globalID = requestAnimationFrame(repeatOften);
-
-
-
 
 
   //initialize swiper when document ready
@@ -225,36 +170,6 @@ $(document).ready(function () {
         url: "send.php",
         data: $(form).serialize(),
         success: function (response) {
-          // console.log('Ajax сработал. Ответ сервера: ' + response);
-          // alert('Форма отправлена, мы свяжемся с вами через 10 минут');
-          //modalThanks.toggleClass('modal-thanks--visible');
-        
-          // modal.toggleClass('modal--visible');
-          //modal.removeClass('modal--visible');
-          //$('.modal__form').css(
-          //   ANIME
-          // // count = 1;
-          // // let flyAnimate = () => {
-          // //   flyInterval = requestAnimationFrame(flyAnimate);
-          // //   console.log(count);
-          // //   count=count - 0.05;
-          // //   console.log('.modal__form opacity',$('.modal__form').css('opacity'));
-          // //   if ($('.modal__form').css('opacity') > 0) {
-          // //         $('.modal__form').css('opacity',count); 
-          // //         $('.modal__title').css('opacity',count); 
-          // //       } else {
-          // //         cancelAnimationFrame(flyInterval);
-          // //         $('form')[2].reset();
-          // //         $('.modal__form').css('display',"none");
-          // //         $('.modal__title').css('display',"none");
-          // //         //$('.modal__form').css('display',"flex");
-          // //        // modal.removeClass('modal--visible');
-          // //         $('.modal__thanks-block').css('display',"block");
-          // //       }
-          // // }; 
-          // // flyInterval = requestAnimationFrame(flyAnimate);
-          // // $('.modal__form').css('display',"flex");
-          // // $('.modal__thanks-block').css('display',"none");
           $('.modal__form').hide(); //css('display',"none");
           $('form')[2].reset();
           $('.modal__title').text("Форма отправлена");
@@ -323,26 +238,6 @@ $(document).ready(function () {
           //console.log('Ajax сработал. Ответ сервера: ' + response);
           modalThanks.toggleClass('modal--visible');
           $('form')[0].reset();
-
-          // $('.control__form').css('display',"none");
-          // $('.control__thanks-block').css('display', "block");
-          // // count = 1;
-          // // let flyAnimate = () => {
-          // //   flyInterval = requestAnimationFrame(flyAnimate);
-          // //   console.log(count);
-          // //   count=count - 0.005;
-          // //   console.log('.modal__form opacity',$('.modal__form').css('opacity'));
-          // //   if ($('.control__thanks-block').css('opacity') > 0) {
-          // //         $('.control__thanks-block').css('opacity',count); 
-          // //       } else {
-          // //         cancelAnimationFrame(flyInterval);
-          // //         $('form')[0].reset();
-          // //         $('.control__form').css('display',"flex");
-          // //         $('.control__thanks-block').css('display', "none");
-          // //         $('.control__thanks-block').css('opacity', 1); 
-          // //       }
-          // // }; 
-          // flyInterval = requestAnimationFrame(flyAnimate);
         }
       });
     }
@@ -400,7 +295,7 @@ $(document).ready(function () {
             $('.footer__title').css('display',"none");
             $('.footer__thanks-block').css('display', "block");
             count = 1;
-            let flyAnimate = () => {
+            function flyAnimate (){
               flyInterval = requestAnimationFrame(flyAnimate);
               console.log(count);
               count=count - 0.01;
@@ -415,7 +310,7 @@ $(document).ready(function () {
                     $('.footer__title').css('display',"block");
                     $('.footer__thanks-block').css('opacity',1);
                   }
-            }; 
+            } 
             flyInterval = requestAnimationFrame(flyAnimate);
           }
         });
@@ -432,78 +327,45 @@ $(document).ready(function () {
   
   
   // Яндекс карта с меткой с собственным изображением
+    //перенесена в html
+  ///
+
+  //подключение YouTube
+  var player;
+  $('.video__play').on('click', function onYouTubeIframeAPIReady(){
+    player = new YT.Player('player', {
+      height: '465',
+      width: '100%',
+      videoId: 'TvVYeLvujLk',
+      events: {
+        'onReady': videoPlay,
+      }
+    });
+  });
+  function videoPlay(event) {
+    event.target.playVideo();
+  }
+
+// <iframe width="560" height="315" src="https://www.youtube.com/embed/TvVYeLvujLk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-
-
-  // window.addEventListener(`resize`, event => {
-  //   if (window.width() < 550) {
-
-  //   }
-  // }, false);
-    
-  // setTimeout(function(){
-  //   var elem = document.createElement('script');
-  //   elem.type = 'text/javascript';
-  //   elem.src ='//api-maps.yandex.ru/2.1/?apikey=82309e32-bfc0-4ed6-af23-11eee8e9d283&lang=ru_RU&onload=getYaMap';
-  //   document.getElementsByTagName('body')[0].appendChild(elem);
-  // }, 2000);
-
-  //  function getYaMap(){
-  //     var myMap = new ymaps.Map('map', {
-  //             center: [55.743676, 37.592230],
-  //             zoom: 15
-  //         }, {
-  //             searchControlProvider: 'yandex#search'
-  //         }),
-
-  //         // Создаём макет содержимого.
-  //         MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-  //             '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-  //         ),
-
-  //         myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-  //             hintContent: 'Офис Design repair LTD',
-  //             balloonContent: 'Парковка во дворе'
-  //         }, {
-  //             // Опции.
-  //             // autoFitToViewport: 'ifNull',
-  //             // searchControlProvider: 'yandex#search',
-  //             // Необходимо указать данный тип макета.
-  //             iconLayout: 'default#image',
-  //             // Своё изображение иконки метки.
-  //             iconImageHref: 'img/location.png',
-  //             // Размеры метки.
-  //             iconImageSize: [32, 32],
-  //             // Смещение левого верхнего угла иконки относительно
-  //             // её "ножки" (точки привязки).
-  //             iconImageOffset: [-5, -38]
-  //         });
-  //         myMap.behaviors.disable('scrollZoom');
-  //     // myMap.container.fitToViewport();
-
-  //     myMap.geoObjects
-  //         .add(myPlacemark);
-      
-  // }
-
-
-  
-  const topArrow = () => {
+ function topArrow(){
     const totop = document.querySelector('.totop'),
       hero = document.querySelector('.hero');
  
     totop.style.opacity = 0;
      
     const base = hero.offsetTop;
-     window.addEventListener('scroll', () => {    
+    modalAll
+
+     window.addEventListener('scroll', function(){    
       if (window.pageYOffset > base ) {
         totop.style.opacity = 1;
       } else {
         totop.style.opacity = 0;
       }
     });
-  };
+  }
   
   topArrow();
 
