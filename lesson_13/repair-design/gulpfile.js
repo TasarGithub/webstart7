@@ -16,9 +16,9 @@ function servSass() {
   return src("./sass/**/*.sass", "./sass/**/*.scss")
       .pipe(wait(400))
       .pipe(sass())
-      // .pipe(autoprefixer({
-      //   cascade: false
-      // }))
+      .pipe(autoprefixer({
+        cascade: false
+      }))
       .pipe(dest("./css"))
       .pipe(browserSync.stream());
 }
@@ -35,6 +35,10 @@ function bs() {
   watch("./sass/**/*.sass").on('change', servSass);
   watch("./sass/**/*.scss").on('change', servSass);
   watch("./js/*.js").on('change', browserSync.reload);
+  watch("./*.html").on('change', html);
+  watch("./sass/**/*.sass").on('change', buildCSS);
+  watch("./js/*.js").on('change', buildJS);
+  // series(buildCSS, buildJS, html);
 }
 
 
@@ -57,7 +61,37 @@ function minifyCss() {
 // });
 //
 
-function buildCSS(done) {
+function buildCSS() {
+  src('css/*.+(css|!min.css)')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    // .pipe(rename({
+    //   suffix: '.min'
+    // }))
+    .pipe(dest('dist/css/'));
+  // done();
+}
+
+function buildJS() {
+  src(['js/**.js','!js/**.min.js'])
+    .pipe(minify({ext:{
+          min:'.js'
+        }
+     }))
+    .pipe(dest('dist/js/'));
+
+  src('js/**.min.js').pipe(dest('dist/js/'));
+  // done();
+}
+function html() {
+  src('**html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(dest('dist/'));
+  // done();
+}
+
+
+
+function buildCssDone(done) {
   src('css/*.+(css|!min.css)')
     .pipe(cleanCSS({compatibility: 'ie8'}))
     // .pipe(rename({
@@ -67,7 +101,7 @@ function buildCSS(done) {
   done();
 }
 
-function buildJS(done) {
+function buildJsDone(done) {
   src(['js/**.js','!js/**.min.js'])
     .pipe(minify({ext:{
           min:'.js'
@@ -78,12 +112,14 @@ function buildJS(done) {
   src('js/**.min.js').pipe(dest('dist/js/'));
   done();
 }
-function html(done) {
+function htmlDone(done) {
   src('**html')
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(dest('dist/'));
   done();
 }
+
+
 
 function php(done) {
   src('**.php')
@@ -117,6 +153,6 @@ function fonts(done) {
 
 //fVM45WFXJNjvNMff841nvZ7wzjFffNzp
 
-exports.serve = bs;
+exports.serve = series(bs);
 exports.mini = minifyCss;
-exports.build = series(buildCSS, buildJS, html, php, fonts);//, imagemin);
+exports.build = series(buildCssDone, buildJsDone, htmlDone); //, php, fonts, imagemin);

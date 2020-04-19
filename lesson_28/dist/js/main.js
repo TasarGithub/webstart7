@@ -488,6 +488,7 @@ $(document).ready(function () {
   // }
 
 
+  
   const topArrow = () => {
     const totop = document.querySelector('.totop'),
       hero = document.querySelector('.hero');
