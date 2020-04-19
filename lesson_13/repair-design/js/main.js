@@ -327,71 +327,27 @@ $(document).ready(function () {
   
   
   // Яндекс карта с меткой с собственным изображением
+    //перенесена в html
+  ///
 
+  //подключение YouTube
+  var player;
+  $('.video__play').on('click', function onYouTubeIframeAPIReady(){
+    player = new YT.Player('player', {
+      height: '465',
+      width: '100%',
+      videoId: 'TvVYeLvujLk',
+      events: {
+        'onReady': videoPlay,
+      }
+    });
+  });
+  function videoPlay(event) {
+    event.target.playVideo();
+  }
 
-   
-    // setTimeout(function(){
-    //   var elem = $(document.createElement('script'));
-    //   elem.type = 'text/javascript';
-    //   elem.src ='//api-maps.yandex.ru/2.1/?apikey=82309e32-bfc0-4ed6-af23-11eee8e9d283&lang=ru_RU&onload=getYaMap';
-    //   // var bd = $('body')[0];
-    //   // // $('body')[0].appendChild(elem);
-    //   // $(document.querySelector('script[data-id="yamap"]')).innerHtml=' src=https://api-maps.yandex.ru/2.1/?apikey=82309e32-bfc0-4ed6-af23-11eee8e9d283&lang=ru_RU&onload=getYaMap type="text/javascript"';
-    //   // console.log(' $(script[id=yamap]).innerHtml: ',  $('script[data-id="yamap"]').innerHtml);
-    //   //bd.appendChild(elem);
-    //   document.body.appendChild(elem);
-    //   // console.log('#yamap.src', $('#yamap').attr('src'));
-    //   // $('#yamap').attr('src', 'https://api-maps.yandex.ru/2.1/?apikey=82309e32-bfc0-4ed6-af23-11eee8e9d283&lang=ru_RU&onload=getYaMap');
+// <iframe width="560" height="315" src="https://www.youtube.com/embed/TvVYeLvujLk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-    //   // document.getElementById("yamap").src='//api-maps.yandex.ru/2.1/?apikey=82309e32-bfc0-4ed6-af23-11eee8e9d283&lang=ru_RU&onload=getYaMap';
-    //   // console.log('#yamap.src', $('#yamap').attr('src'));
-    // }, 2000);
-
-    // setTimeout(function(){
-    //   var elem = document.createElement('script');
-    //   elem.type = 'text/javascript';
-    //   elem.src ='//api-maps.yandex.ru/2.1/?apikey=82309e32-bfc0-4ed6-af23-11eee8e9d283&lang=ru_RU&onload=getYaMap';
-    //   document.getElementsByTagName('body')[0].appendChild(elem);
-    // }, 2000);
-  
-    //  function getYaMap(){
-    //     var myMap = new ymaps.Map('map', {
-    //             center: [55.743676, 37.592230],
-    //             zoom: 15
-    //         }, {
-    //             searchControlProvider: 'yandex#search'
-    //         }),
-  
-    //         // Создаём макет содержимого.
-    //         MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-    //             '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-    //         ),
-  
-    //         myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-    //             hintContent: 'Офис Design repair LTD',
-    //             balloonContent: 'Парковка во дворе'
-    //         }, {
-    //             // Опции.
-    //             // autoFitToViewport: 'ifNull',
-    //             // searchControlProvider: 'yandex#search',
-    //             // Необходимо указать данный тип макета.
-    //             iconLayout: 'default#image',
-    //             // Своё изображение иконки метки.
-    //             iconImageHref: 'img/location.png',
-    //             // Размеры метки.
-    //             iconImageSize: [32, 32],
-    //             // Смещение левого верхнего угла иконки относительно
-    //             // её "ножки" (точки привязки).
-    //             iconImageOffset: [-5, -38]
-    //         });
-    //         myMap.behaviors.disable('scrollZoom');
-    //     // myMap.container.fitToViewport();
-  
-    //     myMap.geoObjects
-    //         .add(myPlacemark);
-        
-    // }
-  
 
  function topArrow(){
     const totop = document.querySelector('.totop'),
