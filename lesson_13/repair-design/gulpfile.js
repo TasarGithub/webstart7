@@ -73,10 +73,9 @@ function buildCSS() {
 
 function buildJS() {
   src(['js/**.js','!js/**.min.js'])
-    .pipe(minify({ext:{
-          min:'.js'
-        }
-     }))
+    .pipe(minify({ext:{min:'.js'},
+          noSource: true
+    }))
     .pipe(dest('dist/js/'));
 
   src('js/**.min.js').pipe(dest('dist/js/'));
@@ -103,15 +102,28 @@ function buildCssDone(done) {
 
 function buildJsDone(done) {
   src(['js/**.js','!js/**.min.js'])
-    .pipe(minify({ext:{
-          min:'.js'
-        }
-     }))
+    .pipe(minify({ext:{min:'.js'},
+          noSource: true
+    }))
     .pipe(dest('dist/js/'));
 
   src('js/**.min.js').pipe(dest('dist/js/'));
   done();
 }
+
+// вариант валеры на всякий случай
+// function buildjs(done)
+//  { src(['js/*.js',]) 
+//     .pipe(minify({ ext:{ min:'.js' }, 
+//     ignoreFiles: ['.min.js'], 
+//     noSource: true })) 
+//     .pipe(dest('dist/js/'));
+//     src('js/**.min.js').pipe(dest('dist/js/'));
+//  done(); 
+// }
+
+
+
 function htmlDone(done) {
   src('**html')
     .pipe(htmlmin({ collapseWhitespace: true }))

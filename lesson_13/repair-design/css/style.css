@@ -522,6 +522,8 @@ h1, h2, h3, h4, strong {
     color: #fff; }
   .input--light::placeholder {
     color: #fff; }
+  .input--light::-moz-placeholder, .input--light :-moz-placeholder {
+    opacity: 1; }
 
 .policy {
   position: relative; }
