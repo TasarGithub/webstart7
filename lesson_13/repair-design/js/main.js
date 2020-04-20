@@ -60,10 +60,10 @@ $(document).ready(function () {
 
 
   modalBtn.on('click', function () {
-    if ($('div').is('#glo_vksubscribe')) {
-      $('#glo_vksubscribe').remove();
-      $('.modal__title').text('Оставьте заявку и наш менеджер свяжется с вами ');
-    }
+    // if ($('div').is('#glo_vksubscribe')) {
+    //   $('#glo_vksubscribe').remove();
+    //   $('.modal__title').text('Оставьте заявку и наш менеджер свяжется с вами ');
+    // }
     $('.modal__form').css('display',"flex");
     $('.modal__title').css('display',"block");
     $('.modal__thanks-block').css('display',"none");
@@ -77,8 +77,9 @@ $(document).ready(function () {
     modal.removeClass('modal--visible');
   });
 
+  
   closeBtnThanks.on('click', function() {
-    modalThanks.removeClass('modal-thanks--visible');
+    modalThanks.removeClass('modal--visible');
   });
 
 
@@ -174,14 +175,11 @@ $(document).ready(function () {
         url: "send.php",
         data: $(form).serialize(),
         success: function (response) {
-          $('.modal__form').hide(); //css('display',"none");
+          //$('.modal__form').hide(); //css('display',"none");
           $('form')[2].reset();
-          $('.modal__title').text("Форма отправлена");
-          $(".modal__dialog").append("<div id=\"glo_vksubscribe\"> <script type=\"text/javascript\">VK.Widgets.Group(\"glo_vksubscribe\", {mode: 3, width: \"220\", no_cover: 1 }, 123083697)</script></div>");
-          $('#glo_vksubscribe').css('height', '400px');
-          $('#glo_vksubscribe').css('width', '220px');
-          
-               //$(".modal__dialog").append("<div id=\"vk_subscribe\"></div><script type=\"text/javascript\">VK.Widgets.Subscribe(\"vk_subscribe\", {}, -123083697);</script>");
+          modal.removeClass('modal--visible');
+          modalThanks.toggleClass('modal--visible');
+          ym(62095768,'reachGoal','sendForm');
         },
         erorr: function(responce) {
           console.error('Ошибка запроса' + responce);
@@ -190,6 +188,7 @@ $(document).ready(function () {
       });
     }
   });
+
 
   $('.control__form').validate({
     errorClass: "invalid",
@@ -242,6 +241,7 @@ $(document).ready(function () {
           //console.log('Ajax сработал. Ответ сервера: ' + response);
           modalThanks.toggleClass('modal--visible');
           $('form')[0].reset();
+          ym(62095768,'reachGoal','sendForm');
         }
       });
     }
@@ -292,30 +292,10 @@ $(document).ready(function () {
           data: $(form).serialize(),
           success: function (response) {
             //console.log('Ajax сработал. Ответ сервера: ' + response);
-            // modalThanks.toggleClass('modal-thanks--visible');
-            // $('form')[1].reset();
+            $('form')[1].reset();
             // // modal.removeClass('modal--visible');
-            $('.footer__form').css('display',"none");
-            $('.footer__title').css('display',"none");
-            $('.footer__thanks-block').css('display', "block");
-            count = 1;
-            function flyAnimate (){
-              flyInterval = requestAnimationFrame(flyAnimate);
-              //console.log(count);
-              count=count - 0.01;
-              //console.log('.modal__form opacity',$('.modal__form').css('opacity'));
-              if ($('.footer__thanks-block').css('opacity') > 0) {
-                    $('.footer__thanks-block').css('opacity',count); 
-                  } else {
-                    cancelAnimationFrame(flyInterval);
-                    $('form')[1].reset();
-                    $('.footer__form').css('display',"flex");
-                    $('.footer__thanks-block').css('display', "none");
-                    $('.footer__title').css('display',"block");
-                    $('.footer__thanks-block').css('opacity',1);
-                  }
-            } 
-            flyInterval = requestAnimationFrame(flyAnimate);
+            modalThanks.toggleClass('modal--visible');
+            ym(62095768,'reachGoal','sendForm');
           }
         });
       }

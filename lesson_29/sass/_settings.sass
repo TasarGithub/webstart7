@@ -1,0 +1,79 @@
+*, *::before, *::after
+  box-sizing: border-box
+
+html 
+  font-size:  14px
+body
+  font-family: FuturaBookC, sans-serif
+  font-size: 1rem
+img 
+  max-width: 100%
+h1, h2, h3, h4, strong 
+  font-weight: 400
+// p
+//   margin: 0
+.section
+  // padding: 60px 0
+  &--dark
+    background-color: $dark
+    color: $light
+  &-title
+    text-align: center
+    z-index: 30
+    &--left
+      text-align: left
+    &--light
+      color: $light
+    &__heading
+      margin: 0 0 1rem 0
+      text-transform: uppercase
+      font-family: 'Yeseva One', cursive
+      font-weight: 400
+      font-size: 1.4rem
+      letter-spacing: 0.3px
+      &--primary
+        color: $primary
+    &__image
+      display: flex
+      justify-content: center
+      align-items: center
+      &::before, &::after
+        content: ''
+        width: 32px
+        height: 1px
+        background-color: $primary
+        margin: 0 9px
+    &-projects
+      &__heading
+        margin-bottom: 1.6rem
+        font-family: Yeseva One
+        font-style: normal
+        font-weight: normal
+        font-size: 27px
+        line-height: 37px
+        letter-spacing: -0.065em
+      &__text
+        margin: 0
+        font-family: FuturaBookC
+        font-style: normal
+        font-weight: normal
+        font-size: 18px
+        line-height: 29px
+        margin-bottom: 2.2rem
+    &__word
+      display: flex
+      align-items: center
+      &::after
+        content: ''
+        width: 92px
+        height: 2px
+        background-color: $primary
+        margin-left: 2.4rem
+    &__text
+      font-size: 1.28rem
+      line-height: 2.07rem
+      max-width: 31.57rem
+  &__control
+    margin-top: 3rem
+.swiper-menu
+  z-index: 30
