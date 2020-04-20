@@ -39,12 +39,12 @@ $(document).ready(function () {
 
   //Close modal windows
   $('[data-close="modal"]').each(function(index, item){
-    console.log('item: ', item);
+    //console.log('item: ', item);
 
     $(item).click(function(event) {
       var target = event.target;
   
-      console.log('target', target); 
+      //console.log('target', target); 
      
           if  ($(target).hasClass("modal--visible")) {
             $(target).removeClass("modal--visible");
@@ -301,9 +301,9 @@ $(document).ready(function () {
             count = 1;
             function flyAnimate (){
               flyInterval = requestAnimationFrame(flyAnimate);
-              console.log(count);
+              //console.log(count);
               count=count - 0.01;
-              console.log('.modal__form opacity',$('.modal__form').css('opacity'));
+              //console.log('.modal__form opacity',$('.modal__form').css('opacity'));
               if ($('.footer__thanks-block').css('opacity') > 0) {
                     $('.footer__thanks-block').css('opacity',count); 
                   } else {
@@ -405,7 +405,7 @@ $(document).ready(function () {
 
   $('.six-step__swiper-menu').on('click', '.six-step__swiper-menu-item', function() {
     const index = $(this).data('index');
-    console.log('index: ', index);
+    //console.log('index: ', index);
     mySwiperSix.slideTo(index);
  });
  
@@ -423,7 +423,7 @@ $(document).ready(function () {
     $('.six-step__swiper-menu-item').each(function(index, element){
       
       if (index === mySwiperSix.realIndex ) {
-        console.log('element: ', element);
+        //console.log('element: ', element);
         $(element).fadeTo(700, 1);
         
       }
