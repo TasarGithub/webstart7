@@ -74,13 +74,29 @@ function buildCSS() {
 function buildJS() {
   src(['js/**.js','!js/**.min.js'])
     .pipe(minify({ext:{min:'.js'},
-          noSource: true
+         noSource: true
     }))
     .pipe(dest('dist/js/'));
 
   src('js/**.min.js').pipe(dest('dist/js/'));
   // done();
 }
+
+
+
+// function buildJS()
+//  { src(['js/*.js',]) 
+//     .pipe(minify({ ext:{ min:'.js' }, 
+//     ignoreFiles: ['.min.js'], 
+//     noSource: true })) 
+//     .pipe(dest('dist/js/'));
+
+//     src('js/**.min.js').pipe(dest('dist/js/'));
+//  //done(); 
+// }
+
+
+
 function html() {
   src('**html')
     .pipe(htmlmin({ collapseWhitespace: true }))
@@ -103,7 +119,7 @@ function buildCssDone(done) {
 function buildJsDone(done) {
   src(['js/**.js','!js/**.min.js'])
     .pipe(minify({ext:{min:'.js'},
-          noSource: true
+         noSource: true
     }))
     .pipe(dest('dist/js/'));
 
@@ -165,6 +181,6 @@ function fonts(done) {
 
 //fVM45WFXJNjvNMff841nvZ7wzjFffNzp
 
-exports.serve = series(bs);
+exports.serve = bs;
 exports.mini = minifyCss;
 exports.build = series(buildCssDone, buildJsDone, htmlDone); //, php, fonts, imagemin);

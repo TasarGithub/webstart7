@@ -33,22 +33,26 @@ $(document).ready(function () {
 
   //console.log('modaljs: ', modaljs);
 
+
+
+
+
   //Close modal windows
   $('[data-close="modal"]').each(function(index, item){
     console.log('item: ', item);
 
-    item.click(function(event) {
+    $(item).click(function(event) {
       var target = event.target;
   
       console.log('target', target); 
      
-          if  (target.hasClass("modal--visible")) {
-              target.removeClass("modal--visible");
+          if  ($(target).hasClass("modal--visible")) {
+            $(target).removeClass("modal--visible");
           }
     });
     $(document).keydown(function(event) {
-      if (event.code === 'Escape' && (item.hasClass("modal--visible"))) {
-        item.removeClass("modal--visible");
+      if (event.code === 'Escape' && ( $(item).hasClass("modal--visible"))) {
+        $(item).removeClass("modal--visible");
       }
     });
 
