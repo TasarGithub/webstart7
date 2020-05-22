@@ -307,7 +307,8 @@ $(document).ready(function () {
 
   //$('.phone').mask('0000-0000');
   // маска для телефона
-  $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+  //$('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+  $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "Ваш номер телефона:"});
   
   
   // Яндекс карта с меткой с собственным изображением
@@ -340,7 +341,7 @@ $(document).ready(function () {
     totop.style.opacity = 0;
      
     const base = hero.offsetTop;
-    modalAll
+    
 
      window.addEventListener('scroll', function(){    
       if (window.pageYOffset > base ) {
@@ -359,6 +360,17 @@ $(document).ready(function () {
     var scrollTime=curPos/1.73;
     $("body,html").animate({"scrollTop":0},scrollTime);
     });
+
+    //плавная прокрутка при нажимании на пункты меню
+    // $(document).ready(function(){
+    //   $("a[href^='#']").bind("click", function(e){
+    //   var anchor = $(this);
+    //   $('html, body').stop().animate({"scrollTop": $(anchor.attr('href')).offset().top - 100
+    //   }, 1000);
+    //     e.preventDefault();
+    //   });
+    //     return false;
+    //   });
 
 
     const mySwiperSix = new Swiper('.six-step__swiper-container', {

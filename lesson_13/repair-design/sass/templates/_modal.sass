@@ -18,7 +18,7 @@
     visibility: visible
   &__dialog
     position: relative
-    max-width: 36.36rem
+    max-width: 36.36rem 
     background: $dark url('../img/bg-lines.svg') no-repeat center
     padding: 2.357rem 3.5rem 1.928rem
     color: $light
@@ -37,6 +37,7 @@
     border: none
     margin: 12px
     cursor: pointer
+    outline-color: transparent
   &__title
     font-family: 'Yeseva One', cursive
     font-size: 1.357rem
@@ -49,6 +50,12 @@
   &__input
     display: flex
     flex-direction: column
+    &::placeholder
+      font-family: 'Futura Medium', sans-serif
+      font-style: normal
+      font-weight: 500
+      font-size: 1.285rem
+      line-height: 1.71rem
     &-group
       margin-bottom: 3.428rem
       &:nth-child(3)
