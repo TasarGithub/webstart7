@@ -403,6 +403,16 @@ h1, h2, h3, h4, strong {
 .section__control {
   margin-top: 3rem; }
 
+.section-subtitle {
+  margin: 24px auto 40px;
+  font-family: FuturaBookC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px; }
+  .section-subtitle__design {
+    max-width: 741px; }
+
 .swiper-menu {
   z-index: 30; }
 
@@ -946,36 +956,52 @@ div[id$='-error'] {
     color: #fff;
     padding: 1.214rem 2.5rem; }
 
-.four-steps__wrap {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 200px; }
+.four-steps {
+  padding: 0 0 120px 0; }
+  .four-steps__wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 200px; }
+  .four-steps__form {
+    flex-basis: 69%; }
+  .four-steps__dialog {
+    margin-left: 85px;
+    margin-top: 90px; }
+  .four-steps__arc {
+    height: 636px;
+    flex-basis: 81%;
+    background: url(../img/bg-arc.png) no-repeat center/contain;
+    background-size: 88.9%; }
+    .four-steps__arc-img {
+      height: 98.5%;
+      object-fit: cover;
+      margin-top: 54px;
+      margin-left: 43px; }
+  .four-steps__temp {
+    height: 628px;
+    background: url(../img/bg-arc.png) no-repeat center/contain; }
 
-.four-steps__form {
-  flex-basis: 69%; }
-
-.four-steps__dialog {
-  margin-left: 85px;
-  margin-top: 90px; }
-
-.four-steps__arc {
-  height: 636px;
-  flex-basis: 81%;
-  background: url(../img/bg-arc.png) no-repeat center/contain;
-  background-size: 88.9%; }
-  .four-steps__arc-img {
-    height: 98.5%;
-    object-fit: cover;
-    margin-top: 54px;
-    margin-left: 43px; }
-
-.four-steps__temp {
-  height: 628px;
-  background: url(../img/bg-arc.png) no-repeat center/contain; }
+.design {
+  padding: 202px 0 0 0;
+  margin-bottom: -440px; }
 
 .tab-content {
   display: none;
   opacity: 0; }
+
+#tab-content-1 {
+  margin-top: -40px;
+  margin-bottom: -40px; }
+
+#tab-content-2 {
+  margin-top: -112px;
+  margin-bottom: 40px;
+  margin-right: 80px;
+  margin-left: 40px; }
+
+.fantasies__text {
+  margin-top: 137px;
+  margin-bottom: 85px; }
 
 .fantasies--visible {
   display: block;
@@ -983,14 +1009,18 @@ div[id$='-error'] {
   transition: opacity .5s ease; }
 
 .fantasies__list {
+  margin-top: 47px;
   list-style-type: none; }
 
 .fantasies__item {
   font-size: 2rem;
   line-height: 150%; }
 
+.fantasies__image2 {
+  margin-top: 38px; }
+
 .six-step {
-  padding: 10rem 0 20rem 0; }
+  padding: 430px 0 20rem 0; }
   .six-step__container {
     position: relative; }
   .six-step__section-title {
