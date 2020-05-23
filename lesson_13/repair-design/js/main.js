@@ -31,15 +31,97 @@ $(document).ready(function () {
   var modalAll = document.querySelectorAll('[data-close="modal"]'),
     modaljs = document.querySelector('.modal');
 
-  //console.log('modaljs: ', modaljs);
 
 
+
+
+  $('.fantasies__item').each(function(index, item){
+
+    $(item).click(function(event) {
+      
+      switch ($(item).attr('data-index')) { 
+        
+        
+        case '1':
+          toggleSrcImg('1');
+          //$('#tab-content-1').toggleClass('fantasies--visible');
+          break;
+        case '2': 
+          toggleSrcImg('2');
+          //deleteVisible();
+         // $('#tab-content-2').toggleClass('fantasies--visible');
+          break;
+        case '3': 
+          toggleSrcImg('3');
+          //deleteVisible();
+         // $('#tab-content-3').toggleClass('fantasies--visible');
+          break;		
+        case '4': 
+          toggleSrcImg('4');
+          //deleteVisible();
+         // $('#tab-content-4').toggleClass('fantasies--visible');
+          break;
+        case '5':
+          toggleSrcImg('5');
+          //$('#tab-content-1').toggleClass('fantasies--visible');
+          break;
+        case '6': 
+          toggleSrcImg('6');
+          //deleteVisible();
+          // $('#tab-content-2').toggleClass('fantasies--visible');
+          break;
+        case '7': 
+          toggleSrcImg('7');
+          //deleteVisible();
+          // $('#tab-content-3').toggleClass('fantasies--visible');
+          break;		
+        case '8': 
+          toggleSrcImg('8');
+          //deleteVisible();
+          // $('#tab-content-4').toggleClass('fantasies--visible');
+          break;
+        case '9': 
+          toggleSrcImg('9');
+          //deleteVisible();
+          // $('#tab-content-2').toggleClass('fantasies--visible');
+          break;
+        case '10': 
+          toggleSrcImg('10');
+          //deleteVisible();
+          // $('#tab-content-3').toggleClass('fantasies--visible');
+          break;		
+        case '11': 
+          toggleSrcImg('11');
+          //deleteVisible();
+          // $('#tab-content-4').toggleClass('fantasies--visible');
+          break;
+      }
+
+      function deleteVisible() {
+          $('.tab-content').each(function(index, item){
+              if  ($(item).hasClass("fantasies--visible")) {
+              $(item).removeClass("fantasies--visible");
+            }
+          });
+        }
+      
+        function toggleSrcImg(num) {
+          $('.tab-content img').each(function(index, item){
+            var newSrc = $(item).attr('src');
+            newSrc = newSrc.slice(0, newSrc.indexOf('-')+1) + num + newSrc.slice(newSrc.indexOf('.'));
+            $(item).attr('src', newSrc);
+          });
+        }
+
+
+    });
+  });
 
 
 
   //Close modal windows
   $('[data-close="modal"]').each(function(index, item){
-    //console.log('item: ', item);
+    console.log('item: ', item);
 
     $(item).click(function(event) {
       var target = event.target;

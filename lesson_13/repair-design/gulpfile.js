@@ -16,9 +16,10 @@ function servSass() {
   return src("./sass/**/*.sass", "./sass/**/*.scss")
       .pipe(wait(400))
       .pipe(sass())
-      .pipe(autoprefixer({
-        cascade: false
-      }))
+      //восстановить - убрать комменты
+      // .pipe(autoprefixer({
+      //   cascade: false
+      // }))
       .pipe(dest("./css"))
       .pipe(browserSync.stream());
 }
@@ -36,8 +37,8 @@ function bs() {
   watch("./sass/**/*.scss").on('change', servSass);
   watch("./js/*.js").on('change', browserSync.reload);
   watch("./*.html").on('change', html);
-  watch("./sass/**/*.sass").on('change', buildCSS);
-  watch("./js/*.js").on('change', buildJS);
+  //watch("./sass/**/*.sass").on('change', buildCSS); вернуть
+  //watch("./js/*.js").on('change', buildJS);  вернуть
   // series(buildCSS, buildJS, html);
 }
 
@@ -61,26 +62,26 @@ function minifyCss() {
 // });
 //
 
-function buildCSS() {
-  src('css/*.+(css|!min.css)')
-    .pipe(cleanCSS({compatibility: 'ie8'}))
-    // .pipe(rename({
-    //   suffix: '.min'
-    // }))
-    .pipe(dest('dist/css/'));
-  // done();
-}
+  // function buildCSS() {
+  //   src('css/*.+(css|!min.css)')
+  //     .pipe(cleanCSS({compatibility: 'ie8'}))
+  //     // .pipe(rename({
+  //     //   suffix: '.min'
+  //     // }))
+  //     .pipe(dest('dist/css/'));
+  //   // done();
+  // }
 
-function buildJS() {
-  src(['js/**.js','!js/**.min.js'])
-    .pipe(minify({ext:{min:'.js'},
-         noSource: true
-    }))
-    .pipe(dest('dist/js/'));
+  // function buildJS() {
+  //   src(['js/**.js','!js/**.min.js'])
+  //     .pipe(minify({ext:{min:'.js'},
+  //         noSource: true
+  //     }))
+  //     .pipe(dest('dist/js/'));
 
-  src('js/**.min.js').pipe(dest('dist/js/'));
-  // done();
-}
+  //   src('js/**.min.js').pipe(dest('dist/js/'));
+  //   // done();
+  // }
 
 
 
@@ -119,7 +120,7 @@ function buildCssDone(done) {
 function buildJsDone(done) {
   src(['js/**.js','!js/**.min.js'])
     .pipe(minify({ext:{min:'.js'},
-         noSource: true
+        noSource: true
     }))
     .pipe(dest('dist/js/'));
 

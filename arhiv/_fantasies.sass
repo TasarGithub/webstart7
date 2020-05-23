@@ -1,0 +1,77 @@
+.fantasies
+  &__row
+    background:  $dark url('../img/bg-fantasies.jpg') no-repeat center / cover
+
+.tabs 
+  max-width: 90%
+  float: none
+  list-style: none
+  padding: 0
+  margin: 75px auto
+  border-bottom: 4px solid #ccc
+
+.tabs:after 
+  content: ''
+  display: table
+  clear: both
+
+.tabs input[type=radio] 
+  display:none
+
+.tabs label p 
+  padding: 5px
+  margin-right: 0
+
+.tabs label 
+  display: block
+  float: left
+  width: 50%
+  color: #ccc
+  font-size: 30px
+  font-weight: normal
+  text-decoration: none
+  text-align: center
+  line-height: 2
+  cursor: pointer
+  box-shadow: inset 0 4px #ccc
+  border-bottom: 4px solid #ccc
+  -webkit-transition: all 0.5s /* Safari 3.1 to 6.0 */
+  transition: all 0.5s
+
+.tabs label span 
+  display: none
+
+.tabs label:hover 
+  color: #3498db
+  box-shadow: inset 0 4px #3498db
+  border-bottom: 4px solid #3498db
+
+#tab-content-1
+  display: block
+
+.tab-content 
+  display: none
+  width: 100%
+  float: left
+  padding: 15px
+  box-sizing: border-box
+  background-color:#ffffff
+
+.tabs [id^="tab"]:checked + label 
+  background: #FFF
+  box-shadow: inset 0 4px #3498db
+  border-bottom: 4px solid #3498db
+  color: #3498db
+
+#tab-first:checked ~ 
+  #tab-content-1
+    display: block
+  #tab-content-2
+    display: none
+
+#tab-second:checked ~ 
+  #tab-content-2
+    display: block
+  #tab-content-1
+    display: none
+

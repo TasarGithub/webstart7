@@ -408,24 +408,24 @@
                 <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами </h3>
                 <form action="send.php" method="POST" class="form modal__form">
                   <div class="modal__input-group">
-                    <label for="user-name-four-steps" class="label form__label label--light">Имя</label>
-                    <input type="text" name="userName" class="input form__input modal__input input--light" id="user-name-four-steps" placeholder="Как вас зовут:">
+                    <label for="user-name-modal" class="label form__label label--light">Имя</label>
+                    <input type="text" name="userName" class="input form__input modal__input input--light" id="user-name-modal" placeholder="Как вас зовут:">
                   </div>
                   <!-- /.modal__input-group -->
                   <div class="modal__input-group">
-                    <label for="user-phone-four-steps" class="label form__label label--light">Телефон</label>
-                    <input type="tel" name="userPhone" class="input form__input modal__input input--light" id="user-phone-four-steps" placeholder="Ваш номер телефона:">
+                    <label for="user-phone-modal" class="label form__label label--light">Телефон</label>
+                    <input type="tel" name="userPhone" class="input form__input modal__input input--light" id="user-phone-modal" placeholder="Ваш номер телефона:">
                   </div>
                   <!-- /.modal__input-group -->
                   <div class="modal__input-group">
-                    <label for="user-email-four-steps" class="label form__label label--light">Email</label>
-                    <input type="email" name="userEmail" class="input form__input modal__input input--light" id="user-email-four-steps" placeholder="Ваш Email:">
+                    <label for="user-email-modal" class="label form__label label--light">Email</label>
+                    <input type="email" name="userEmail" class="input form__input modal__input input--light" id="user-email-modal" placeholder="Ваш Email:">
                   </div>
                   <!-- /.modal__input-group -->
           
                   <div class="policy modal__policy">
-                    <input type="checkbox" name="modalPolicyCheckbox" id="four-steps__policy" class=policy__checkbox checked>
-                    <label for="four-steps__policy" class="policy__label">я соглашаюсь с обработкой данных</label>
+                    <input type="checkbox" name="modalPolicyCheckbox" id="modal__policy" class=policy__checkbox checked>
+                    <label for="modal__policy" class="policy__label">я соглашаюсь с обработкой данных</label>
                   </div>
                   <!-- /.policy -->
                   <button class="button button--primary modal__button button--form">
@@ -456,10 +456,23 @@
           <div class="col-30 types__col-30">
             <div class="fantasies__text">
               <div class="section-title section-title--left">
-                <h2 class="section-title__heading section-title__heading--primary section-title-projects__heading">Мы реализуем ваши самые смелые фантазии</h2>
+                <h2 class="section-title__heading section-title__heading--primary section-title-projects__heading">Мы реализуем ваши  <span class=section-title__word>самые смелые фантазии</span></h2>
                 <!-- /.section-title__heading -->
               </div>
               <!-- /.section-title -->
+
+              <div class="tabs">
+                <!-- Кнопка-переключатель и название первого таба -->
+                <input type="radio" name="tabs" id="tab-first" checked >
+                <label for="tab-first">
+                    <p>Хиты продаж</p>
+                </label>
+                <!-- Кнопка-переключатель и название второго таба -->
+                <input type="radio" name="tabs" id="tab-second">
+                <label for="tab-second">
+                    <p>Последнее</p>
+                </label>
+            </div>
 
               <ul class="fantasies__list">
                 <li class="fantasies__item" data-index="1">Американский стиль</li>
@@ -491,7 +504,8 @@
           </div>
           <!-- /.col-30 -->
           <div class="col-30 types__col-30">
-            <div id="tab-content-1" class="tab-content fantasies--visible">
+ 
+            <div id="tab-content-1" class="tab-content">
               <div class="fantasies__image1">
                 <img src="img/fantasies/1-1.jpg" alt="">
               </div>
@@ -500,23 +514,19 @@
                 <img src="img/fantasies/2-1.jpg" alt="">
               </div>
               <!-- /.fantasies__image2 -->            
-            </div>
-             <!-- #tab-content-1 -->
-          </div>
-          <!-- /.col-30 -->
+            </div> <!-- #tab-content-2 -->
 
-          <div class="col-30 types__col-30">
-            <div id="tab-content-2" class="tab-content fantasies--visible">
+            <div id="tab-content-2" class="tab-content">
               <div class="fantasies__image1">
-                <img src="img/fantasies/3-1.jpg" alt="">
+                <img src="img/fantasies/1-2.jpg" alt="">
               </div>
               <!-- /.fantasies__image1 -->
               <div class="fantasies__image2">
-                <img src="img/fantasies/4-1.jpg" alt="">
+                <img src="img/fantasies/2-2.jpg" alt="">
               </div>
               <!-- /.fantasies__image2 -->            
-            </div>
-             <!-- #tab-content-2 -->
+            </div> <!-- #tab-content-2 -->
+
           </div>
           <!-- /.col-30 -->
         </div>
@@ -1052,6 +1062,10 @@
             .add(myPlacemark);
         
     }
+
+
+
+  
   </script>
 
 
