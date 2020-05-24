@@ -1212,6 +1212,50 @@ div[id$='-error'] {
 
 .clients {
   padding: 130px 0 450px; }
+  .clients__foto-name {
+    max-width: 324px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto; }
+    .clients__foto-name > img {
+      margin-right: 23px;
+      margin-bottom: 23px; }
+  .clients__text {
+    max-width: 324px;
+    font-family: FuturaBookC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 180%;
+    color: #959595;
+    margin: auto; }
+  .clients__result {
+    margin-top: 36px;
+    margin-left: 50px;
+    max-width: 294px;
+    display: flex;
+    justify-content: center; }
+  .clients__result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.29rem;
+    font-family: 'Yeseva One', cursive;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.785rem;
+    background-color: #e3b873;
+    color: #fff;
+    padding: 1rem 1.214rem; }
+    .clients__result-item > img {
+      max-height: 31.35px; }
+  .clients__metr {
+    min-width: 133px;
+    text-transform: uppercase;
+    margin-right: 2px; }
+  .clients__money {
+    min-width: 158px; }
 
 .footer {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
