@@ -251,7 +251,6 @@ $(document).ready(function () {
     },
 
     submitHandler: function(form) {
-      
       $.ajax({
         type: "POST",
         url: "send.php",
@@ -270,7 +269,6 @@ $(document).ready(function () {
       });
     }
   });
-
 
   $('.control__form').validate({
     errorClass: "invalid",

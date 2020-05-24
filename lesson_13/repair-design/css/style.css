@@ -403,6 +403,29 @@ h1, h2, h3, h4, strong {
 .section__control {
   margin-top: 3rem; }
 
+.section-text {
+  font-family: FuturaBookC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 34px;
+  text-align: center; }
+  .section-text__team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 568px;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 88px;
+    color: #363636; }
+    .section-text__team:before {
+      content: '';
+      width: 55px;
+      height: 2px;
+      background-color: #e3b873;
+      margin-bottom: 17px; }
+
 .section-subtitle {
   margin: 24px auto 40px;
   font-family: FuturaBookC;
@@ -412,6 +435,11 @@ h1, h2, h3, h4, strong {
   line-height: 27px; }
   .section-subtitle__design {
     max-width: 741px; }
+  .section-subtitle__team {
+    max-width: 448px;
+    margin-bottom: 70px; }
+  .section-subtitle__clients {
+    max-width: 360px; }
 
 .swiper-menu {
   z-index: 30; }
@@ -1122,6 +1150,68 @@ div[id$='-error'] {
     position: relative;
     height: 200px;
     margin-top: -100px; }
+
+.team__row {
+  margin-bottom: -50px; }
+
+.team--title {
+  color: #fff; }
+
+.team--card-title {
+  color: #181818;
+  text-align: center; }
+
+.team__prof-icon {
+  position: absolute;
+  left: 35px;
+  top: -35px;
+  max-width: 70px;
+  max-height: 70px;
+  background-color: #e3b873;
+  box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2); }
+
+.team__card {
+  position: relative;
+  margin-bottom: -128px; }
+
+.team__img {
+  display: block;
+  margin: auto;
+  box-shadow: 0px 5px 5px rgba(34, 34, 34, 0.25); }
+
+.team__card-text {
+  margin: -85px auto 0;
+  max-width: 233px;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0; }
+
+.team__prof {
+  display: block;
+  text-align: center;
+  margin: auto;
+  font-family: FuturaBookC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  color: #959595;
+  margin-bottom: 24px; }
+
+.team__experience {
+  font-family: Yeseva One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25); }
+
+.clients {
+  padding: 130px 0 450px; }
 
 .footer {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;

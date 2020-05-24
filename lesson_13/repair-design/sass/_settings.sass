@@ -10,10 +10,8 @@ img
   max-width: 100%
 h1, h2, h3, h4, strong 
   font-weight: 400
-// p
-//   margin: 0
+
 .section
-  // padding: 60px 0
   &--dark
     background-color: $dark
     color: $light
@@ -75,6 +73,31 @@ h1, h2, h3, h4, strong
       max-width: 31.57rem
   &__control
     margin-top: 3rem
+  &-text
+    font-family: FuturaBookC
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 34px
+    text-align: center
+    &__team
+      display: flex
+      flex-direction: column
+      // justify-content: center
+      align-items: center
+      max-width: 568px
+      margin: auto
+      margin-top: 150px
+      margin-bottom: 88px
+      color: $dark-grey
+      &:before
+        content: ''
+        width: 55px
+        height: 2px
+        background-color: #e3b873
+        margin-bottom: 17px
+        
+
   &-subtitle
     margin: 24px auto 40px
     font-family: FuturaBookC
@@ -85,7 +108,11 @@ h1, h2, h3, h4, strong
     // text-align: center
     &__design
       max-width: 741px
-    // &>p
+    &__team
+      max-width: 448px 
+      margin-bottom: 70px     
+    &__clients
+      max-width: 360px
 
 .swiper-menu
   z-index: 30
