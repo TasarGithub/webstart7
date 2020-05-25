@@ -4,22 +4,50 @@
     display: flex
     justify-content: space-between
     margin-bottom: 200px
+    background: url(../img/bg-arc.png) no-repeat left/contain
+    background-size: 49%
+    padding: 0 0 16px 0
   &__form-wrap
     flex-basis: 69%
   &__dialog
     margin-left: 85px
     margin-top: 90px
+
   &__arc
     // position: relative
     height: 636px
     flex-basis: 81%
-    background: url(../img/bg-arc.png) no-repeat center/contain
-    background-size: 88.9%
     &-img
-      height: 98.5%
+      height: 100%
       object-fit: cover
-      margin-top: 54px
-      margin-left: 43px
+      margin-top: 59px
+      margin-left: 2px
+  &__text
+    display: flex
+    flex-direction: column
+    align-items: start
+  &__item
+    // font-family: FuturaBookC
+    font-style: normal
+    font-weight: 500
+    font-size: 16px
+    line-height: 21px
+    &:nth-child(1)
+      max-width: 364px
+      margin-top: 117px
+      margin-left: -355px
+    &:nth-child(2)
+      margin-top: 68px
+      margin-left: -292px
+    &:nth-child(3)
+      margin-top: 125px
+      margin-left: -266px
+    &:nth-child(4)
+      max-width: 258px
+      margin-top: 113px
+      margin-left: -326px
+
+      
   &__temp
     height: 628px
     background: url(../img/bg-arc.png) no-repeat center/contain

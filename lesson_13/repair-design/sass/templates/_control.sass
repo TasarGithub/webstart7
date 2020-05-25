@@ -51,7 +51,10 @@
     flex-wrap: wrap
     justify-content: space-between
   &__input
+   // outline-style: none
     color: $dark
+    &::placeholder
+      color: $dark-grey
     &-group
       margin-top: 1px
       display: flex
@@ -67,7 +70,7 @@
     letter-spacing: 0.5px
 
   &__label
-    margin-bottom: -6px
+    margin-bottom: 1px
     justify-content: center
 
   &__policy

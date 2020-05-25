@@ -27,20 +27,20 @@ try {
     $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'vshtrs@gmail.com';                     // SMTP username
-    $mail->Password   = '5tgB6yhN7ujM';                               // SMTP password
+    $mail->Password   = '$rfv%tgb^yhn';                               // SMTP password
     $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
     //Recipients
-    $mail->setFrom('tasarvv17@gmail.com', 'Тарас отправитель');
+    $mail->setFrom('vshtrs@gmail.com', 'Тарас отправитель');
     $mail->addAddress('tasar-ya@yandex.ru', 'Тарас получатель');     // Add a recipient
 
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Новая заявка с сайта';
-    $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}. Его почта: ${userEmail}";
-
+    $mail->Body    = "Имя пользователя: ${userNameFoursteps}, его телефон: ${userPhoneFoursteps}. Его почта: ${userEmailFoursteps}";
+    //${userName} ${userNameFooter} ${userNameFoursteps} ${userNameControl}
     if ($mail->send()) {
       echo "ok nnnnnnnn";
     } else {

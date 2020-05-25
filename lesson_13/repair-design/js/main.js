@@ -351,7 +351,7 @@ $(document).ready(function () {
         required: true,
         email: true
       },
-      fourStepsPolicyPolicyCheckbox: {
+      fourStepsPolicyCheckbox: {
         required: true
       }
     },
