@@ -335,7 +335,9 @@ body {
   font-size: 1rem; }
 
 img {
-  max-width: 100%; }
+  max-width: 100%;
+  outline-style: 0;
+  border: none; }
 
 h1, h2, h3, h4, strong {
   font-weight: 400; }
@@ -395,6 +397,11 @@ h1, h2, h3, h4, strong {
       height: 2px;
       background-color: #e3b873;
       margin-left: 2.4rem; }
+  .section-title__fantasies {
+    max-width: 411px;
+    font-size: 26px;
+    line-height: 37px;
+    letter-spacing: 0.7px; }
   .section-title__text {
     font-size: 1.28rem;
     line-height: 2.07rem;
@@ -990,7 +997,7 @@ div[id$='-error'] {
     display: flex;
     justify-content: space-between;
     margin-bottom: 200px; }
-  .four-steps__form {
+  .four-steps__form-wrap {
     flex-basis: 69%; }
   .four-steps__dialog {
     margin-left: 85px;
@@ -1013,39 +1020,84 @@ div[id$='-error'] {
   padding: 202px 0 0 0;
   margin-bottom: -440px; }
 
-.tab-content {
-  display: none;
-  opacity: 0; }
+.fantasies {
+  position: relative;
+  background: #131313 url("../img/bg-fantasies.jpg") no-repeat center/cover; }
+  .fantasies::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(19, 19, 19, 0.8); }
+  .fantasies__row {
+    opacity: 0.99; }
+  .fantasies__col-1 {
+    flex-basis: 30%; }
+  .fantasies__col-2 {
+    flex-basis: 35%; }
+  .fantasies__col-3 {
+    flex-basis: 35%; }
+  .fantasies__text {
+    margin-left: 99px;
+    margin-top: 137px;
+    margin-bottom: 85px; }
+  .fantasies--visible {
+    display: block;
+    opacity: 1;
+    transition: opacity .5s ease; }
+  .fantasies__list {
+    margin-top: 38px;
+    margin-left: -40px;
+    list-style-type: none; }
+  .fantasies__item {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 35px;
+    margin-bottom: 14.5px;
+    letter-spacing: 1px; }
+    .fantasies__item:hover {
+      cursor: pointer; }
+  .fantasies__marker {
+    color: #e3b873; }
+    .fantasies__marker:after {
+      content: '';
+      background-color: #e3b873;
+      height: 0.66px;
+      width: 146px; }
+  .fantasies__image2 {
+    margin-top: 31px; }
+  .fantasies__image1, .fantasies__image2 {
+    max-width: 354px; }
 
 #tab-content-1 {
   margin-top: -40px;
-  margin-bottom: -40px; }
+  margin-bottom: -40px;
+  margin-right: 100px;
+  margin-left: 40px; }
 
 #tab-content-2 {
   margin-top: -112px;
   margin-bottom: 40px;
-  margin-right: 80px;
+  margin-right: 100px;
   margin-left: 40px; }
 
-.fantasies__text {
-  margin-top: 137px;
-  margin-bottom: 85px; }
+#tab-content-1 fantasies__image1 {
+  max-height: 557px; }
 
-.fantasies--visible {
-  display: block;
-  opacity: 1;
-  transition: opacity .5s ease; }
+#tab-content-1 fantasies__image2 {
+  max-height: 350px; }
 
-.fantasies__list {
-  margin-top: 47px;
-  list-style-type: none; }
+#tab-content-2 .fantasies__image1 {
+  max-height: 275px; }
 
-.fantasies__item {
-  font-size: 2rem;
-  line-height: 150%; }
-
-.fantasies__image2 {
-  margin-top: 38px; }
+#tab-content-2 .fantasies__image2 {
+  max-height: 625px; }
 
 .six-step {
   padding: 430px 0 20rem 0; }

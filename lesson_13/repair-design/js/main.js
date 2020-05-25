@@ -44,63 +44,65 @@ $(document).ready(function () {
         
         case '1':
           toggleSrcImg('1');
-          //$('#tab-content-1').toggleClass('fantasies--visible');
+          deleteMarker();
+          $(".fantasies__item:nth-child(1)").toggleClass('fantasies__marker');
           break;
         case '2': 
           toggleSrcImg('2');
-          //deleteVisible();
-         // $('#tab-content-2').toggleClass('fantasies--visible');
+          deleteMarker();
+          $(".fantasies__item:nth-child(2)").toggleClass('fantasies__marker');
           break;
         case '3': 
           toggleSrcImg('3');
-          //deleteVisible();
-         // $('#tab-content-3').toggleClass('fantasies--visible');
+          deleteMarker();
+          $(".fantasies__item:nth-child(3)").toggleClass('fantasies__marker');
           break;		
         case '4': 
           toggleSrcImg('4');
-          //deleteVisible();
-         // $('#tab-content-4').toggleClass('fantasies--visible');
+          deleteMarker();
+          $(".fantasies__item:nth-child(4)").toggleClass('fantasies__marker');
           break;
         case '5':
           toggleSrcImg('5');
-          //$('#tab-content-1').toggleClass('fantasies--visible');
+          deleteMarker();
+          $(".fantasies__item:nth-child(5)").toggleClass('fantasies__marker');
           break;
         case '6': 
           toggleSrcImg('6');
-          //deleteVisible();
-          // $('#tab-content-2').toggleClass('fantasies--visible');
+          deleteMarker();
+          $(".fantasies__item:nth-child(6)").toggleClass('fantasies__marker');
           break;
         case '7': 
           toggleSrcImg('7');
-          //deleteVisible();
-          // $('#tab-content-3').toggleClass('fantasies--visible');
+          deleteMarker();
+          $(".fantasies__item:nth-child(7)").toggleClass('fantasies__marker');
           break;		
         case '8': 
           toggleSrcImg('8');
-          //deleteVisible();
-          // $('#tab-content-4').toggleClass('fantasies--visible');
+          deleteMarker();
+          $(".fantasies__item:nth-child(8)").toggleClass('fantasies__marker');
           break;
         case '9': 
           toggleSrcImg('9');
-          //deleteVisible();
-          // $('#tab-content-2').toggleClass('fantasies--visible');
+          deleteMarker();
+          $(".fantasies__item:nth-child(9)").toggleClass('fantasies__marker');
           break;
         case '10': 
           toggleSrcImg('10');
-          //deleteVisible();
-          // $('#tab-content-3').toggleClass('fantasies--visible');
+          deleteMarker();
+          $(".fantasies__item:nth-child(10)").toggleClass('fantasies__marker');
           break;		
         case '11': 
           toggleSrcImg('11');
-          //deleteVisible();
-          // $('#tab-content-4').toggleClass('fantasies--visible');
+          deleteMarker();
+          $(".fantasies__item:nth-child(11)").toggleClass('fantasies__marker');
           break;
       }
 
-      function deleteVisible() {
-          $('.tab-content').each(function(index, item){
-              if  ($(item).hasClass("fantasies--visible")) {
-              $(item).removeClass("fantasies--visible");
+      function deleteMarker() {
+          $('.fantasies__item').each(function(index, item){
+              if  ($(item).hasClass("fantasies__marker")) {
+              $(item).removeClass("fantasies__marker");
             }
           });
         }
@@ -257,7 +259,8 @@ $(document).ready(function () {
         data: $(form).serialize(),
         success: function (response) {
           //$('.modal__form').hide(); //css('display',"none");
-          $('form')[2].reset();
+          //$('.modal__form').reset();
+          $('form')[3].reset();
           modal.removeClass('modal--visible');
           modalThanks.toggleClass('modal--visible');
           ym(62095768,'reachGoal','sendForm');
@@ -320,6 +323,7 @@ $(document).ready(function () {
         success: function (response) {
           //console.log('Ajax сработал. Ответ сервера: ' + response);
           modalThanks.toggleClass('modal--visible');
+          //$('.control__form').reset(); не работает, надо именно форма нужна
           $('form')[0].reset();
           ym(62095768,'reachGoal','sendForm');
         }
@@ -328,7 +332,69 @@ $(document).ready(function () {
 
   });
 
+  $('.four-steps__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      // строчное правило simple rule, converted to {required:true}
+      userNameFoursteps: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhoneFoursteps: {
+        required: true,
+        minlength: 17
+      },
+      //правило - объект
+      userEmailFoursteps: {
+        required: true,
+        email: true
+      },
+      fourStepsPolicyPolicyCheckbox: {
+        required: true
+      }
+    },
+    //сообщения
+    messages: {
+      userNameFoursteps: {
+        required: "Заполните поле",
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя не длинее 15ти букв"
+      },
+      userPhoneFoursteps: {
+        required: "Заполните поле",
+        minlength: "Введите корректный телефон",
+      },      
+      userEmailFoursteps: {
+        required: "Заполните поле",
+        email: "Введите корректный email"
+      },
+      fourStepsPolicyCheckbox: {
+        required: "Заполните поле"
+      }
+    },
 
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          //$('.modal__form').hide(); //css('display',"none");
+          $('form')[1].reset();
+          //$('.four-steps__form').reset();
+          modal.removeClass('modal--visible');
+          modalThanks.toggleClass('modal--visible');
+          ym(62095768,'reachGoal','sendForm');
+        },
+        erorr: function(responce) {
+          console.error('Ошибка запроса' + responce);
+        }
+      });
+    }
+    
+  });
 
   $('.footer__form').validate({
       errorClass: "invalid",
@@ -372,7 +438,8 @@ $(document).ready(function () {
           data: $(form).serialize(),
           success: function (response) {
             //console.log('Ajax сработал. Ответ сервера: ' + response);
-            $('form')[1].reset();
+            $('form')[2].reset();
+            //$('.footer__form').reset();
             // // modal.removeClass('modal--visible');
             modalThanks.toggleClass('modal--visible');
             ym(62095768,'reachGoal','sendForm');
