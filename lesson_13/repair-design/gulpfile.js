@@ -17,9 +17,9 @@ function servSass() {
       .pipe(wait(400))
       .pipe(sass())
       //восстановить - убрать комменты
-      // .pipe(autoprefixer({
-      //   cascade: false
-      // }))
+      .pipe(autoprefixer({
+        cascade: false
+      }))
       .pipe(dest("./css"))
       .pipe(browserSync.stream());
 }
