@@ -305,11 +305,11 @@ $(document).ready(function () {
       },
       userPhoneControl: {
         required: "Заполните поле",
-        minlength: "Введите корректный телефон",
+        minlength: "Исправьте телефон",
       },      
       userEmailControl: {
         required: "Заполните поле",
-        email: "Введите корректный email"
+        email: "Исправьте email"
       },
       controlPolicyCheckbox: {
         required: "Заполните поле"
@@ -332,45 +332,45 @@ $(document).ready(function () {
 
   });
 
-  $('.four-steps__form').validate({
+  $('.metering__form').validate({
     errorClass: "invalid",
     errorElement: "div",
     rules: {
       // строчное правило simple rule, converted to {required:true}
-      userNameFoursteps: {
+      userNameMetering: {
         required: true,
         minlength: 2,
         maxlength: 15
       },
-      userPhoneFoursteps: {
+      userPhoneMetering: {
         required: true,
         minlength: 17
       },
       //правило - объект
-      userEmailFoursteps: {
+      userEmailMetering: {
         required: true,
         email: true
       },
-      fourStepsPolicyCheckbox: {
+      meteringPolicyCheckbox: {
         required: true
       }
     },
     //сообщения
     messages: {
-      userNameFoursteps: {
+      userNameMetering: {
         required: "Заполните поле",
         minlength: "Имя не короче двух букв",
         maxlength: "Имя не длинее 15ти букв"
       },
-      userPhoneFoursteps: {
+      userPhoneMetering: {
         required: "Заполните поле",
-        minlength: "Введите корректный телефон",
+        minlength: "Исправьте телефон",
       },      
-      userEmailFoursteps: {
+      userEmailMetering: {
         required: "Заполните поле",
-        email: "Введите корректный email"
+        email: "Исправьте email"
       },
-      fourStepsPolicyCheckbox: {
+      meteringPolicyCheckbox: {
         required: "Заполните поле"
       }
     },
@@ -383,7 +383,7 @@ $(document).ready(function () {
         success: function (response) {
           //$('.modal__form').hide(); //css('display',"none");
           $('form')[1].reset();
-          //$('.four-steps__form').reset();
+          //$('.metering__form').reset();
           modal.removeClass('modal--visible');
           modalThanks.toggleClass('modal--visible');
           ym(62095768,'reachGoal','sendForm');
@@ -455,8 +455,9 @@ $(document).ready(function () {
   //$('.phone').mask('0000-0000');
   // маска для телефона
   //$('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
-  $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "Ваш номер телефона:"});
+  $('[type=tel]').mask('+7(000) 000-00-00');//, {placeholder: "Ваш номер телефона:"});
   
+ // $('#user-phone-metering').mask('+7(000) 000-00-00', {placeholder: "Ваш телефон:"});
   
   // Яндекс карта с меткой с собственным изображением
     //перенесена в html
