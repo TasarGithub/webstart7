@@ -401,51 +401,61 @@
 
       <div class="container">
         <div class="metering__wrap">
-          <div class="metering__arc">
+          <!-- <div class="metering__arc">
             <img src="img/arc-metering.svg" alt="" class="metering__arc-img">
-          </div>
+          </div> -->
           <div class="metering__text">
             <p class="metering__item">Наш специалист приедет для замеров в день контакта или назначит удобную для вас
               дату</p><!-- /.metering__item -->
             <p class="metering__item">Бесплатный замер</p><!-- /.metering__item -->
             <p class="metering__item">Бесплатная консультация</p><!-- /.metering__item -->
-            <p class="metering__item">Получите смету расходов и сроки вашего будущего ремонта</p>
+            <p class="metering__item">Получите смету расходов и сроки&nbsp;вашего будущего ремонта</p>
             <!-- /.metering__item -->
           </div><!-- /.metering__text -->
           <!-- /.metering__arc -->
           <div class="metering__form-wrap">
-            <!-- <div class="modal "> -->
-              <div class="modal__dialog metering__dialog">
-                  <h3 class="modal__title metering__modal-title">Оставьте заявку на бесплатный выезд замерщика </h3>
-                <form action="send.php" method="POST" class="form modal__form metering__form">
-                  <div class="modal__input-group">
-                    <label for="user-name-metering" class="label form__label label--light">Имя</label>
-                    <input type="text" name="userNameMetering" class="input form__input modal__input input--light" id="user-name-metering" placeholder="Как вас зовут:">
-                  </div>
-                  <!-- /.modal__input-group -->
-                  <div class="modal__input-group">
-                    <label for="user-phone-metering" class="label form__label label--light">Телефон</label>
-                    <input type="tel" name="userPhoneMetering" class="input form__input modal__input input--light" id="user-phone-metering" placeholder="Ваш телефон:">
-                  </div>
-                  <!-- /.modal__input-group -->
-                  <div class="modal__input-group">
-                    <label for="user-email-metering" class="label form__label label--light">Email</label>
-                    <input type="email" name="userEmailMetering" class="input form__input modal__input input--light" id="user-email-metering" placeholder="Ваш email:">
-                  </div>
-                  <!-- /.modal__input-group -->
-          
-                  <div class="policy modal__policy">
-                    <input type="checkbox" name="meteringPolicyCheckbox" id="metering__policy" class=policy__checkbox checked>
-                    <label for="metering__policy" class="policy__label">я соглашаюсь с обработкой данных</label>
-                  </div>
-                  <!-- /.policy -->
-                  <button class="button button--primary modal__button button--form">
-                    Вызвать замерщика
-                  </button>
-                </form>
-                <!-- /.form metering__form -->
+            <div class="modal__dialog metering__dialog">
+                <h3 class="modal__title metering__modal-title">Оставьте заявку на бесплатный выезд замерщика </h3>
+              <form action="send.php" method="POST" class="form modal__form metering__form">
+                <div class="modal__input-group">
+                  <label for="user-name-metering" class="label form__label label--light">Имя</label>
+                  <input type="text" name="userNameMetering" class="input form__input modal__input input--light" id="user-name-metering" placeholder="Как вас зовут:">
+                </div>
+                <!-- /.modal__input-group -->
+                <div class="modal__input-group">
+                  <label for="user-phone-metering" class="label form__label label--light">Телефон</label>
+                  <input type="tel" name="userPhoneMetering" class="input form__input modal__input input--light" id="user-phone-metering" placeholder="Ваш телефон:">
+                </div>
+                <!-- /.modal__input-group -->
+                <div class="modal__input-group">
+                  <label for="user-email-metering" class="label form__label label--light">Email</label>
+                  <input type="email" name="userEmailMetering" class="input form__input modal__input input--light" id="user-email-metering" placeholder="Ваш email:">
+                </div>
+                <!-- /.modal__input-group -->
+        
+                <div class="policy modal__policy">
+                  <input type="checkbox" name="meteringPolicyCheckbox" id="metering__policy" class=policy__checkbox checked>
+                  <label for="metering__policy" class="policy__label">я соглашаюсь с обработкой данных</label>
+                </div>
+                <!-- /.policy -->
+                <button class="button button--primary modal__button button--form">
+                  Вызвать замерщика
+                </button>
+              </form>
+              <!-- /.form metering__form -->
+            </div>
+            <!-- /.modal-dialog metering__dialog-->
+            <div class="metering__economize">
+              <div class="metering__economize-icon">
+                <img src="img/metering/pig.svg" alt="">
               </div>
-              <!-- /.modal-dialog metering__dialog-->
+              <p>
+                Это поможет сэкономить 10 - 20% от стоимости материалов
+              </p>
+              <!-- /.metering__economize-icon -->
+              
+            </div>
+            <!-- /.economize -->
           </div>
           <!-- /.metering__form -->
         </div>
