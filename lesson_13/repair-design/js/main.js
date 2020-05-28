@@ -18,7 +18,7 @@ $(document).ready(function () {
 
   var modal =$('.modal'),
   modalThanks =$('.modal-thanks'),
-  formModal =$('.modal__form'),
+  formModal =$('#modal__form'),
   formControl =$('.control__form'),
   formFooter =$('.footer__form'),
   btnControl =$('.control__button'),
@@ -123,7 +123,7 @@ $(document).ready(function () {
 
   //Close modal windows
   $('[data-close="modal"]').each(function(index, item){
-    console.log('item: ', item);
+    //console.log('item: ', item);
 
     $(item).click(function(event) {
       var target = event.target;
@@ -148,7 +148,7 @@ $(document).ready(function () {
     //   $('#glo_vksubscribe').remove();
     //   $('.modal__title').text('Оставьте заявку и наш менеджер свяжется с вами ');
     // }
-    $('.modal__form').css('display',"flex");
+    $('#modal__form').css('display',"flex");
     $('.modal__title').css('display',"block");
     $('.modal__thanks-block').css('display',"none");
     $('.modal__form').css('opacity',1);
@@ -208,7 +208,7 @@ $(document).ready(function () {
     return this.optional( element ) || /[A-z0-9._]+@[A-z0-9.-]+\.[a-z]+/.test( value );
   };
 
-  $('.modal__form').validate({
+  $('#modal__form').validate({
     errorClass: "invalid",
     errorElement: "div",
     rules: {
@@ -258,8 +258,9 @@ $(document).ready(function () {
         url: "send.php",
         data: $(form).serialize(),
         success: function (response) {
-          //$('.modal__form').hide(); //css('display',"none");
-          //$('.modal__form').reset();
+          //console.log('response: ', response);
+
+          //console.log($(form).serialize());
           $('form')[3].reset();
           modal.removeClass('modal--visible');
           modalThanks.toggleClass('modal--visible');
@@ -321,6 +322,8 @@ $(document).ready(function () {
         url: "send.php",
         data: $(form).serialize(),
         success: function (response) {
+          //console.log('$(form).serialize()');
+          //console.log($(form).serialize());
           //console.log('Ajax сработал. Ответ сервера: ' + response);
           modalThanks.toggleClass('modal--visible');
           //$('.control__form').reset(); не работает, надо именно форма нужна
@@ -381,7 +384,10 @@ $(document).ready(function () {
         url: "send.php",
         data: $(form).serialize(),
         success: function (response) {
+          //console.log('response: ', response);
+
           //$('.modal__form').hide(); //css('display',"none");
+          //console.log($(form).serialize());
           $('form')[1].reset();
           //$('.metering__form').reset();
           modal.removeClass('modal--visible');
@@ -437,6 +443,7 @@ $(document).ready(function () {
           url: "send.php",
           data: $(form).serialize(),
           success: function (response) {
+            //console.log($(form).serialize());
             //console.log('Ajax сработал. Ответ сервера: ' + response);
             $('form')[2].reset();
             //$('.footer__form').reset();

@@ -2,10 +2,33 @@
 
 // $mail->CharSet = "UTF-8";
 
-$userName = $_POST['userName'];
-$userEmail = $_POST['userEmail'];
-$userPhone = $_POST['userPhone'];
+if ($_POST['userName']<>''){
+    $userName = $_POST['userName'];
+    $userEmail = $_POST['userEmail'];
+    $userPhone = $_POST['userPhone'];
+}
+if ($_POST['userNameMetering']<>''){
+    $userName = $_POST['userNameMetering'];
+    $userEmail = $_POST['userEmailMetering'];
+    $userPhone = $_POST['userPhoneMetering'];
+    //echo "userNameMetering", $userName;
+} 
+if ($_POST['userNameControl']<>''){
+    $userName = $_POST['userNameControl'];
+    $userEmail = $_POST['userEmailControl'];
+    $userPhone = $_POST['userPhoneControl'];
+   // echo "userNameControl", $userName;
+} 
+if ($_POST['userNameFooter']<>''){
+    $userName = $_POST['userNameFooter'];
+    $userPhone = $_POST['userPhoneFooter'];
+   // echo $userName;
+}
 
+// echo "userName", $_POST['userName'];
+// echo "userNameMetering", $_POST['userNameMetering'];
+// echo $_POST['userNameControl'];
+// echo $_POST['userNameFuter'];
 
 
 // Load Composer's autoloader
@@ -39,7 +62,7 @@ try {
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Новая заявка с сайта';
-    $mail->Body    = "Имя пользователя: ${userNameFoursteps}, его телефон: ${userPhoneFoursteps}. Его почта: ${userEmailFoursteps}";
+    $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}. Его почта: ${userEmail}";
     //${userName} ${userNameFooter} ${userNameFoursteps} ${userNameControl}
     if ($mail->send()) {
       echo "ok nnnnnnnn";
