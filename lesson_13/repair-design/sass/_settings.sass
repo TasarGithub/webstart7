@@ -16,6 +16,9 @@ input
 h1, h2, h3, h4, strong 
   font-weight: 400
 
+.display-none
+  display: none
+
 .section
   &--dark
     background-color: $dark
@@ -57,7 +60,6 @@ h1, h2, h3, h4, strong
         letter-spacing: -0.065em
       &__text
         margin: 0
-        font-family: FuturaBookC
         font-style: normal
         font-weight: normal
         font-size: 18px
@@ -84,7 +86,6 @@ h1, h2, h3, h4, strong
   &__control
     margin-top: 3rem
   &-text
-    font-family: FuturaBookC
     font-style: normal
     font-weight: normal
     font-size: 20px
@@ -110,7 +111,6 @@ h1, h2, h3, h4, strong
 
   &-subtitle
     margin: 24px auto 40px
-    font-family: FuturaBookC
     font-style: normal
     font-weight: normal
     font-size: 20px
@@ -126,3 +126,20 @@ h1, h2, h3, h4, strong
 
 .swiper-menu
   z-index: 30
+
+.totop
+  position: fixed
+  bottom: 10px
+  right: 3px
+  z-index: 200
+  display: block
+  width: 35px
+  height: 35px
+  // background-color: $dark
+  // color: $light
+  opacity: 0
+  &-wrap 
+    max-width: 1170px
+    margin: 0 auto
+    padding-left: 15px
+    padding-right: 15px

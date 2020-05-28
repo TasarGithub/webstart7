@@ -19,7 +19,7 @@
       max-width: 35rem
       margin-bottom: 2.28rem
     &__content
-      max-width: 30rem
+      //max-width: 30rem
   .title
     font-size: 1.92rem
 
@@ -27,6 +27,9 @@
 @media screen and ( max-width: 992px  )
   .nav
     display: none
+  .metering, .clients
+    display: none
+  
   .card
     &__text
        margin-top: -4.3rem
@@ -42,12 +45,23 @@
       &:nth-child(3),&:nth-child(6)
         // margin-right: -30px
         flex-basis: 20%
+  .bg-lines
+    margin: 0
+    padding: 0
+    &>img
+      display: none
+    &__white
+      //margin-top: -100px
+      // &>img
+      //   display: none
 
   // .hero
   //   &__instagram
   //     display: none
 
 @media screen and ( max-width: 790px  )
+  .projects
+    padding: 3rem 0 3rem 0
   .types__row
     flex-wrap: wrap
   .types__col-30
@@ -57,15 +71,15 @@
   .hero 
     &__instagram
       display: none
+    &__content
+      margin-left: 0
   .types
     &__card
       margin-bottom: 5rem
 
 @media screen and ( max-width: 680px  ) 
   .projects
-    padding: 3rem 0 3rem 0
-    &__title
-
+    //padding: 3rem 0 3rem 0
     &__row
       flex-direction: column
       align-items: center
@@ -102,17 +116,9 @@
       margin-top: 0
     &__six-step
       display: none
-  .bg-lines
-    margin: 0
-    padding: 0
-    &>img
-      display: none
-    &__white
-      //margin-top: -100px
-      // &>img
-      //   display: none
 
-  .types__container, .footer__container, .control__container, .hero__container
+
+  .types__container, .footer__container, .control__container, .container--hero
     width: 90.67%
   // .container
   //   width: 92%
@@ -170,7 +176,7 @@
     padding-top: 148px
     padding-bottom: 61px
     &__content
-      max-width: 28.33rem
+     // max-width: 28.33rem
       margin-left: 0
     &__text
       max-width: 25.744rem
