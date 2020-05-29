@@ -606,17 +606,18 @@ $(document).ready(function () {
 
   $('a[href^="#"]').on('click',function (e) {
     e.preventDefault();
-   
-  
     if ( $(this).attr("class").indexOf("totop") < 0) {
       var id = $(this).attr('href');
       var    top = $(id).offset().top;
-
-     $('body,html').animate({
-          scrollTop: top
-      }, 3000);
+      if ( $(this).attr("class").indexOf("footer__contacts") > 0){
+      $('body,html').animate({
+            scrollTop: top - 400
+        }, 3000);
+      } else {
+        $('body,html').animate({
+          scrollTop: top  }, 3000);
+      }
     }
-
   });
 
 });
