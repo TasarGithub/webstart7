@@ -581,4 +581,43 @@ $(document).ready(function () {
   });
 
 
+  //плавная прокрутка
+  // $("body").on('click', '[href*="#"]', function(e){
+  //   var target = e.target;
+  //   console.log('$target: ', $(target));
+  //   var fixed_offset = 100;
+  //   console.log('$(this.hash): ', $(this.hash));
+  //   $('html,body').animate({ scrollTop: $(target).offset().top}, 1000);
+    
+  //   e.preventDefault();
+  // });
+
+//   $('a[href^="#"], *[data-href^="#"]').on('click', function(e){
+//     e.preventDefault();
+//     console.log('$(this): ', $(this));
+//     var t = 1000;
+//     //var d = $(this).attr('href') ? $(this).attr('data-href') : $(this).attr('href');
+//     var d = $(this).attr('href');
+//     console.log('$(this).attr(href): ', $(this).attr('href'));
+//     console.log('$(d): ', $(d));
+//     $('html,body').stop().animate({ scrollTop: $(this).offset().top }, t);
+    
+// });
+
+  $('a[href^="#"]').on('click',function (e) {
+    e.preventDefault();
+   
+  
+    if ( $(this).attr("class").indexOf("totop") < 0) {
+      var id = $(this).attr('href');
+      var    top = $(id).offset().top;
+
+     $('body,html').animate({
+          scrollTop: top
+      }, 3000);
+    }
+
+  });
+
 });
+
