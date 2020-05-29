@@ -1,11 +1,17 @@
 .projects
   padding-top: 12.57rem
   padding-bottom: 30rem
-  background: $dark url ('../img/bg-lines-hero-projects.svg') no-repeat center/cover;
+  //background: $dark url ('../img/bg-lines-hero-projects.svg') no-repeat center/cover;
   //background: $dark url('../img/bg-lines-control-types-workorder.svg') no-repeat center/cover
   &__col-60
+    flex: 0 0 60%
     margin-top: 2px
     margin-right: 19px
+    //min-width: 495px
+  &__col-40
+    flex: 0 0 40%
+    padding-right: 40px
+    //min-width: 300px
 .swiper
   &-container
    // z-index: 30
@@ -14,8 +20,9 @@
     flex-wrap: wrap
     padding-left: 2px
     &__text
-      flex-basis: 43%
+      flex: 0 0 43%
       margin-bottom: 1.2rem
+      //min-width: 140px
       // padding-bottom: 2rem
     &__heading 
       font-size: 1.285rem
@@ -24,6 +31,7 @@
       color: $primary
       text-transform: uppercase
       margin-bottom: 0.5rem
+      min-width: 140px
     &__value
       display: block
       font-size: 1.07rem

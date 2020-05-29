@@ -75,10 +75,20 @@
 
 
 
-
 @media screen and ( max-width: 790px  )
   .projects
-    padding: 3rem 0 25rem 0
+    padding: 3rem 0 29rem 0
+    &__row
+      flex-direction: column
+      align-items: center
+    &__col-40
+      width: 100%
+      flex-basis: 45%
+    &__col-60
+      margin-top: 20px
+      width: 100%
+      flex-basis: 45%
+
   .types__row
     flex-wrap: wrap
   .types__col-30
@@ -143,7 +153,6 @@
       font-size: 22px
     &__six-step
       display: none
-
 
   .types__container, .footer__container, .control__container, .container--hero, .container__small
     width: 90.67%
