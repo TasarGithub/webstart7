@@ -45,12 +45,26 @@
       &:nth-child(3),&:nth-child(6)
         // margin-right: -30px
         flex-basis: 20%
-  .bg-lines
-    margin: 0
-    padding: 0
-    &>img
-      display: none
-    &__white
+  .control
+    &__section-title 
+      color: $light
+    &__button
+      //flex: 0 0 100%
+      max-width: 200px
+      margin: 20px 100px 0
+    &__input
+      &-group
+        flex: 0 0 30%
+    &__form
+      justify-content: space-around
+    &__policy-label
+      margin: 0
+  // .bg-lines
+  //   margin: 0
+  //   padding: 0
+  //   &>img
+  //     display: none
+  //   &__white
       //margin-top: -100px
       // &>img
       //   display: none
@@ -59,9 +73,12 @@
   //   &__instagram
   //     display: none
 
+
+
+
 @media screen and ( max-width: 790px  )
   .projects
-    padding: 3rem 0 3rem 0
+    padding: 3rem 0 25rem 0
   .types__row
     flex-wrap: wrap
   .types__col-30
@@ -76,10 +93,18 @@
   .types
     &__card
       margin-bottom: 5rem
+  .section
+    &__control
+      margin-top: -290px
+
+       
+
+          
+
 
 @media screen and ( max-width: 680px  ) 
   .projects
-    //padding: 3rem 0 3rem 0
+    padding: 3rem 0 29rem 0
     &__row
       flex-direction: column
       align-items: center
@@ -114,11 +139,13 @@
   .section
     &__control
       margin-top: 0
+    &-title__heading
+      font-size: 22px
     &__six-step
       display: none
 
 
-  .types__container, .footer__container, .control__container, .container--hero
+  .types__container, .footer__container, .control__container, .container--hero, .container__small
     width: 90.67%
   // .container
   //   width: 92%
@@ -127,13 +154,16 @@
   .row
     flex-direction: column
     align-items: center
-  .projects__col
-    &-40
-      width: 100%
-      flex-basis: 45%
-    &-60
-      width: 100%
-      flex-basis: 45%
+  .projects
+    padding-bottom: 36px
+    &__col
+      &-40
+        width: 100%
+        flex-basis: 45%
+      &-60
+        width: 100%
+        flex-basis: 45%
+        margin: 18px auto 0
 
   // .section-title
   //   &-projects__heading
@@ -203,34 +233,59 @@
     color: $light
     line-height: 169.8%
     &__section-title
+      color: $light
       margin-top: 0
       padding-top: 51px
+      font-size: 22px
     &__video
       max-width: 340px
       min-height: 207px
+    &__text
+      font-size: 14px
+      line-height: 170.2%
+      margin-bottom: 32px
+      &::before
+        margin-bottom: 17px
+        max-width: 55px
     &__form
       position: relative
-      justify-content: space-between
+      //justify-content: space-between
       flex-direction: column
-      height: 290px
-    &__input-group
-      // height: 30% 
-      // background-color: white
-      // flex-basis: 20%
-      &:nth-child(2)
-        margin-top: -60px
-        
-
+      //height: 290px
+    &__input
+      width: 100%
+      color: $light
+      &::placeholder
+        font-size: 18px
+        line-height: 138.72%
+        color: $light
+      &-group
+        max-width: 100%
+        flex-basis: 100%
+        &:nth-child(2)
+          margin: 0
+          margin-top: 57px
+        &:nth-child(1)
+          margin: 0
+    &__label
+      font-size: 15px
     &__policy
       position: absolute
-      bottom: 90px
+      bottom: 88px
       flex-basis: 100%
       margin: 0 auto 0 0
     &__policy-label 
       // justify-content: flex-start
       // margin-right: 4px
     &__button
-      margin-bottom: -1.5rem
+      margin: 103px auto -24px
+      width: 100%
+      max-width: 100%
+    &__video
+      margin-bottom: 28px
+
+  .policy__label
+    font-size: 16px
 
   .video__play
     max-width: 65px

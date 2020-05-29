@@ -1,5 +1,5 @@
 .control
-  margin-top: -20rem
+  margin-top: -24.49rem
   // display: flex
   // background: url('../img/bg-lines-control-types-workorder.svg') no-repeat center/cover
   //opacity: 0.99
@@ -51,23 +51,31 @@
     justify-content: space-between
   &__input
     color: $dark
+    padding: 6px 0 9px
+    margin-bottom: 4px
+    width: 231px
     &::placeholder
       color: $dark-grey
     &-group
+      flex: 0 0 16.5rem
+      //max-width: 16.5rem
       margin-top: 1px
       display: flex
       flex-direction: column
       // flex-basis: 30%
+      &:nth-child(2)
+        margin-left: 10px
   &__button
-    padding: 1.2857rem 4.2rem
+    padding: 19px 4.2rem
     font-style: normal
     font-weight: 500
     font-size: 1.071rem
-    line-height: 1.285rem
+    line-height: 1rem
     letter-spacing: 0.5px
+    max-height: 51px
 
   &__label
-    margin-bottom: 1px
+    margin-bottom: -6px
     justify-content: center
 
   &__policy
