@@ -3,9 +3,9 @@
     &__item
       margin-right: 1.5rem
 
-@media screen and ( max-width: 1200px )
+@media screen and ( max-width: 1205px )
   html  
-    font-size: 12px
+    font-size: 13px
   .logo
       margin-right: 1rem
   .nav
@@ -23,8 +23,21 @@
   .title
     font-size: 1.92rem
 
+@media screen and ( max-width: 1070px )
+  html  
+    font-size: 12px
 
 @media screen and ( max-width: 992px  )
+  *:hover 
+    box-shadow: none
+    cursor: default
+  .button
+    &:hover
+      background-color: $primary
+
+
+  
+
   .nav
     display: none
   .metering, .clients
@@ -59,6 +72,19 @@
       justify-content: space-around
     &__policy-label
       margin: 0
+  .team
+    padding-top: 100px
+    padding-bottom: 740px 
+    &__row
+      flex-wrap: wrap
+    &__col-30
+      flex-basis: 45%
+      &:nth-child(3)
+        margin: 0 auto
+  #team__card3
+    margin-top: 210px
+
+
   // .bg-lines
   //   margin: 0
   //   padding: 0
@@ -106,6 +132,12 @@
   .section
     &__control
       margin-top: -290px
+  .team__card
+    margin-bottom: 0
+  #team__card3
+    margin-top: 90px
+
+
 
        
 
@@ -163,6 +195,7 @@
   .row
     flex-direction: column
     align-items: center
+    padding: 0 0
   .projects
     padding-bottom: 36px
     &__col
@@ -298,6 +331,7 @@
 
   .video__play
     max-width: 65px
+    cursor: default
 
   .footer
     background: $dark
@@ -305,10 +339,11 @@
     &__wrap
       margin-top: 0
       padding: 0
-      background-color: $dark
+      background: none
     &__form
       max-width: 100%
       margin-bottom: 46px
+
     &__contacts
       padding-top: 275px
     &__digital-contacts
@@ -319,7 +354,7 @@
     &__map
       // display: none
       max-height: 255px
-      margin-top: -467px
+      margin-top: -460px
     &__input
       &-group
         display: flex
@@ -338,6 +373,27 @@
     height: 255px
     width: 100%
 
+
+  .team
+    padding-bottom: 240px 
+    &__card
+      width: 304px
+      margin-top: 90px
+      &-text
+        margin-right: auto
+        margin-left: auto
+        &-img-wrap
+          width: 304px
+  
+  .design
+    padding: 81px 0 100px 0
+    background-color: $dark
+    &__title
+      color: $light
+
+
+    
+
 // @media screen and ( max-width: 500px )     
 //   .footer
 //     &__map
@@ -349,7 +405,29 @@
   .hero
     &__scroll-down
       display: none
-  
+
+
+@media screen and ( max-height: 460px  )
+  .modal
+    &__input
+      &-group
+        margin-bottom: 20px
+    &__policy
+      margin-bottom: 10px
+
+@media screen and ( max-height: 380px  )
+  .modal
+    &__close
+      top: 13px
+    &__title
+      margin-bottom: 13px
+    &__button
+        padding: 8px 47.5px
+
+      
+
+    
+
 
 
   
