@@ -261,13 +261,13 @@ $(document).ready(function () {
           //console.log('response: ', response);
 
           //console.log($(form).serialize());
-          $('form')[3].reset();
+          $('form')[2].reset();
           modal.removeClass('modal--visible');
           modalThanks.toggleClass('modal--visible');
           ym(62095768,'reachGoal','sendForm');
         },
-        erorr: function(responce) {
-          console.error('Ошибка запроса' + responce);
+        erorr: function(response) {
+          console.error('Ошибка запроса' + response);
         }
         
       });
@@ -388,14 +388,14 @@ $(document).ready(function () {
 
           //$('.modal__form').hide(); //css('display',"none");
           //console.log($(form).serialize());
-          $('form')[1].reset();
+          $('form')[10].reset();
           //$('.metering__form').reset();
           modal.removeClass('modal--visible');
           modalThanks.toggleClass('modal--visible');
           ym(62095768,'reachGoal','sendForm');
         },
-        erorr: function(responce) {
-          console.error('Ошибка запроса' + responce);
+        erorr: function(response) {
+          console.error('Ошибка запроса' + response);
         }
       });
     }
@@ -445,7 +445,7 @@ $(document).ready(function () {
           success: function (response) {
             //console.log($(form).serialize());
             //console.log('Ajax сработал. Ответ сервера: ' + response);
-            $('form')[2].reset();
+            $('form')[1].reset();
             //$('.footer__form').reset();
             // // modal.removeClass('modal--visible');
             modalThanks.toggleClass('modal--visible');
